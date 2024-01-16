@@ -1,15 +1,14 @@
 import React from 'react'
 import Header from "../components/Header.jsx"
-import DivHeader from '../components/DivHeader.jsx'
+import DivHeader from '../components/DivHeader.jsx';
+import Infos from "../components/Infos.jsx"
 import Footer from "../components/Footer.jsx"
-
-import Calendrier from "../components/Calendrier.jsx"
 
 function Planning() {
     return (
       <div className="Planning">
         <Header /> <DivHeader/>
-        <Calendrier />
+        <Infos title="info"/>
         <Footer />
       </div>
     );
