@@ -1,15 +1,23 @@
 import React from 'react'
 
+import Maison from "./icons/maison.png"
+import Planning from "./icons/calendrier.png"
+import Carte from "./icons/carte.png"
+import Musculation from "./icons/musculation.png"
+import Qrcode from "./icons/qr-code.png"
+
 import "./Footer.css"
 
 const Footer = () => {
     return (
         <footer>
-            <button className="button_menu">Menu</button>
-            <button className="button_menu">Planning</button>
-            <button className="button_menu">Carte</button>
-            <button className="button_menu">Profil</button>
-            <button className="button_menu">QR Code</button>
+            <button className="button_menu">
+            <img src={Maison} alt="Logo" />
+            </button>
+            <button className="button_menu"><img src={Planning} alt="Logo" /></button>
+            <button className="button_menu"><img src={Carte} alt="Logo" /></button>
+            <button className="button_menu"><img src={Musculation} alt="Logo" /></button>
+            <button className="button_menu"><img src={Qrcode} alt="Logo" /></button>
         </footer>
     )
 }
