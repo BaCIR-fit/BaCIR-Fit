@@ -9,15 +9,18 @@
     }
 }
 
-.header-header {
+header {
+    position: fixed;
+    width: 100%;
+    color: white;
     background-color: #282c34;
     min-height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(5px + 1.5vmin);
-    color: white;
+    font-size: calc(4px + 1.5vmin);
+    z-index: 100; /* Mise au premier plan */
 }
 
 .header-link {

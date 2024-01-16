@@ -5,11 +5,11 @@ import "./Header.css"
 
 const Header = () => {
     return (
-        <header className="header-header">
+        <header>
             <img src={logo} className="header-logo" alt="logo" />
-            <p>
+            <h1>
                 BasiCIR
-            </p>
+            </h1>
         </header>
     )
 }
