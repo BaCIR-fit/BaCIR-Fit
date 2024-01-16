@@ -10,6 +10,7 @@ function Signin() {
       <div className="Signin">
         <Header />
         <DivHeader/>
+        <p>Créer un compte</p>
         <InputsInscription title="Nom"/>
         <InputsInscription title="Prenom"/>
         <InputsInscription title="Pseudo"/>
