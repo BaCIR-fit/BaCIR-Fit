@@ -14,3 +14,15 @@ input{
     color: rgb(99, 93, 158);
     font-weight: bold;
 }
+
+
+select{
+    width: 65%;
+    margin: 5px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 15px;
+    color: rgb(99, 93, 158);
+    font-weight: bold;
+}

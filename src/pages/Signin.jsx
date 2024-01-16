@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../components/Header.jsx"
 import InputsInscription from '../components/InputsInscription.jsx';
+import InputSexeInscription from '../components/InputSexeInscription.jsx';
 import Footer from "../components/Footer.jsx"
 import DivHeader from '../components/DivHeader.jsx';
 
@@ -14,6 +15,7 @@ function Signin() {
         <InputsInscription title="Pseudo"/>
         <br></br>
         <InputsInscription title="Nom" type="date"/>
+        <InputSexeInscription/>
         
         <Footer />
       </div>
