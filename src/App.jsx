@@ -6,7 +6,7 @@ import Planning from "./pages/Planning.jsx";
 import Carte from "./pages/Carte.jsx";
 import Profil from "./pages/Profil.jsx";
 import Qrcode from "./pages/Qrcode.jsx";
-import Signin from './pages/Signin';
+import Signin from './pages/Signin.jsx';
 
 //import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -22,6 +22,7 @@ function App() {
           <Route path="/carte" element={<Carte />} />
           <Route path="/profil" element={<Profil />} />
           <Route path="/qrcode" element={<Qrcode />} />
+          <Route path="/signin" element={<Signin />} />
         </Routes>
       </Router>
     </div>

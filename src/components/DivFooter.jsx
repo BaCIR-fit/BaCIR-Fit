@@ -4,10 +4,10 @@ import logo from '../logo.svg'
 import "./Header.css"
 
 
-const DivHeader = () => {
+const DivFooter = () => {
     return (
-        <div className="divHeader"></div>
+        <div className="divFooter"></div>
     )
 }
 
-export default DivHeader
+export default DivFooter
