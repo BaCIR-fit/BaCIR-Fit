@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Maison from "../icons/maison-blanc.png"
 import Planning from "../icons/calendrier-blanc.png"
@@ -14,10 +15,25 @@ const Footer = () => {
             <button className="button_menu">
                 <img src={Maison} alt="Logo" />
             </button>
-            <button className="button_menu"><img src={Planning} alt="Logo" /></button>
-            <button className="button_menu"><img src={Carte} alt="Logo" /></button>
-            <button className="button_menu"><img src={Musculation} alt="Logo" /></button>
-            <button className="button_menu"><img src={Qrcode} alt="Logo" /></button>
+
+            <button className="button_menu">
+                <Link to="/">
+                    <img src={Planning} alt="Logo" />
+                    Login
+                </Link>
+            </button>
+            
+            <button className="button_menu">
+                <img src={Carte} alt="Logo" />
+            </button>
+
+            <button className="button_menu">
+                <img src={Musculation} alt="Logo" />
+            </button>
+            
+            <button className="button_menu">
+                <img src={Qrcode} alt="Logo" />
+            </button>
         </footer>
     )
 }
