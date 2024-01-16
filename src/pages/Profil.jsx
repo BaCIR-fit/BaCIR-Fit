@@ -3,16 +3,17 @@ import Header from "../components/Header.jsx"
 import Infos from "../components/Infos.jsx"
 import Footer from "../components/Footer.jsx"
 
-function Carte() {
+function Profil() {
     return (
-      <div className="Carte">
+      <div className="Profil">
         <Header />
         <Infos title="first-info"/>
+        <Infos title="info"/>
         <Infos title="info"/>
         <Footer />
       </div>
     );
   }
   
-  export default Carte;
+  export default Profil;
   
