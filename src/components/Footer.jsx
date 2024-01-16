@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Maison from "./icons/maison.png"
-import Planning from "./icons/calendrier.png"
-import Carte from "./icons/carte.png"
-import Musculation from "./icons/musculation.png"
-import Qrcode from "./icons/qr-code.png"
+import Maison from "../icons/maison-blanc.png"
+import Planning from "../icons/calendrier-blanc.png"
+import Carte from "../icons/carte-blanc.png"
+import Musculation from "../icons/musculation-blanc.png"
+import Qrcode from "../icons/qr-code-blanc.png"
 
 import "./Footer.css"
 
@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <footer>
             <button className="button_menu">
-            <img src={Maison} alt="Logo" />
+                <img src={Maison} alt="Logo" />
             </button>
             <button className="button_menu"><img src={Planning} alt="Logo" /></button>
             <button className="button_menu"><img src={Carte} alt="Logo" /></button>
