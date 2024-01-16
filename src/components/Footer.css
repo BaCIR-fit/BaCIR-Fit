@@ -27,3 +27,9 @@ img {
     width: 75%;
     padding: 5%;
 }
+
+.divFooter{
+    position: relative;
+    margin-top: 20%;
+    background-color: blue;
+}
