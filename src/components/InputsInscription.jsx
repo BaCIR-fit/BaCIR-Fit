@@ -5,8 +5,8 @@ import "./InputsInscription.css"
 
 const InputsInscription = (props) => {
     return (
-        <div className={props.title}>
-            <input name="InputInscription" type={props.type} placeholder={props.title} required />
+        <div className="renseignement">
+            <input type={props.type} placeholder={props.placeholder} required />
         </div>
     )
 }

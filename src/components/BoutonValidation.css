@@ -1,0 +1,11 @@
+.validation input{
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    background-color: rgb(99, 93, 158);;
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 15px;
+    color: white;
+    font-weight: bold;
+}

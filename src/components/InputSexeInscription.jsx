@@ -5,7 +5,7 @@ import "./InputsInscription.css"
 
 const InputsInscription = (props) => {
     return (
-        <div className={props.title}>
+        <div className="renseignement">
             <select name="sexe" id="choix-sexe">
             <option value="">--Choisissez une option--</option>
             <option value="homme">Homme</option>
