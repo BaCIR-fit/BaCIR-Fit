@@ -21,6 +21,7 @@ header {
     justify-content: center;
     font-size: calc(4px + 1.5vmin);
     z-index: 100; /* Mise au premier plan */
+    background-color: rgb(99, 93, 158);
 }
 
 .header-link {

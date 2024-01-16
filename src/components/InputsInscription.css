@@ -1,0 +1,23 @@
+.Signin {
+    padding: 0%;
+}
+
+.Nom {
+    position: relative;
+    margin-top: 40%;
+    
+}
+body{
+    
+}
+
+input{
+    width: 65%;
+    margin: 10px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 15px;
+    color: rgb(99, 93, 158);
+    font-weight: bold;
+}
