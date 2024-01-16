@@ -10,8 +10,6 @@ import Qr from "../icons/qr-code-blanc.png"
 import "./Footer.css"
 
 
-
-
 const Footer = () => {
     return (
         <footer>

@@ -8,7 +8,6 @@ import Profil from "./pages/Profil.jsx";
 import Qrcode from "./pages/Qrcode.jsx";
 import Signin from './pages/Signin.jsx';
 
-//import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
