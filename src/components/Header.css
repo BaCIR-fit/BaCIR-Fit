@@ -36,3 +36,9 @@ header {
         transform: rotate(360deg);
     }
 }
+
+.divHeader{
+    position: relative;
+    margin-top: 40%;
+}
+
