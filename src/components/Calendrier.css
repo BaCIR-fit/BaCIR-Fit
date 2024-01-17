@@ -1,0 +1,58 @@
+/* Calendrier.css */
+
+/* Style du calendrier */
+.fc {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Style de l'en-tête du calendrier */
+.fc-toolbar {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: x-small;
+    text-align: center;
+}
+
+/* Style des boutons de l'en-tête du calendrier */
+.fc-toolbar .fc-button {
+    background-color: #7cd07f;
+    color: #ffffff;
+    border: 1px solid #4caf50;
+    border-radius: 3px;
+    font-size: 14px; /* Taille du texte */
+    padding: 4px 8px; /* Espacement intérieur du bouton */
+}
+
+.fc-button:hover {
+    background-color: #45a049;
+    border: 1px solid #45a049;
+}
+
+/* Style des jours de la semaine dans l'en-tête du calendrier */
+.fc-col-header-cell {
+    background-color:rgb(220, 220, 241);
+    font-weight: bold; /* Police en gras */
+    font-size: 14px; /* Taille du texte */
+    text-align: center; /* Alignement du texte au centre */
+}
+
+.fc-timegrid-slot-label {
+    background-color: rgb(229, 244, 250);
+}
+
+/* Style des événements sur le calendrier */
+.fc-event {
+    background-color: #2196f3;
+    color: #ffffff;
+    border: 1px solid #2196f3;
+    border-radius: 3px;
+}
+
+.fc-event:hover {
+    background-color: #1565c0;
+    border: 1px solid #2196f3;
+}
