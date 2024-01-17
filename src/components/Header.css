@@ -19,17 +19,6 @@ header {
     margin-bottom: 20px;
 }
 
-.FakeHeader {
-    width: 100%;
-    height: 15vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 100; /* Mise au premier plan */
-}
-
 .header-link {
     color: #61dafb;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../CIR_fit.svg';
 import Footer from '../components/Footer.jsx';
 import Header from '../components/Header.jsx';
 import Map from '../components/Map';
@@ -9,9 +8,6 @@ const Carte = () => {
 
 return (
 <>
-    <div className='FakeHeader'>
-            <img src={logo} className="header-logo" alt="logo" />
-    </div>
 
     <Header />
     <div>
@@ -19,6 +15,7 @@ return (
     </div>
 
     <Map center={position} zoom={13} markerPosition={position} />
+
 
     <Footer />
 </>
