@@ -36,7 +36,7 @@
 .fc-col-header-cell {
     background-color:rgb(220, 220, 241);
     font-weight: bold; /* Police en gras */
-    font-size: 14px; /* Taille du texte */
+    font-size: 95%; /* Taille du texte */
     text-align: center; /* Alignement du texte au centre */
 }
 
