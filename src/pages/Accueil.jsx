@@ -7,7 +7,9 @@ import Footer from "../components/Footer.jsx"
 function Accueil() {
     return (
       <div className="Accueil">
-        <Header /> <DivHeader/>
+        <Header />
+        {/* <DivHeader/> */}
+        <Infos title="info"/>
         <Infos title="info"/>
         <Infos title="info"/>
         <Infos title="info"/>

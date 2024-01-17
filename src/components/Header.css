@@ -4,19 +4,19 @@
 }
 
 header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
-
     color: white;
     background-color: #282c34;
     height: 15vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 100; /* Mise au premier plan */
     background-color: rgb(99, 93, 158);
+    margin-bottom: 20px;
 }
 
 .FakeHeader {
