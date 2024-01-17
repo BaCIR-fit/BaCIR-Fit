@@ -7,10 +7,9 @@ import QRCode from 'react-qr-code';
 import "../components/Qrcode.css"
 
 
-let sizeBoxH = "50vh";
-let sizeBoxW = "80vw";
 
 function Qrcode() {
+
   return (
     <div className="Qrcode" style={{height : Window.height}}>
       <Header /> 
@@ -19,7 +18,7 @@ function Qrcode() {
 
         <div style={{ margin: "0 auto", maxWidth: Window.width }}>
           
-          <QRCode style={{width : sizeBoxW, height : sizeBoxH, margin : "0 auto"}} value="COUCOU ZEBI" />
+          <QRCode style={{width : "80vw", height : "50vh", margin : "0 auto"}} value="COUCOU ZEBI" />
 
         </div>
 
