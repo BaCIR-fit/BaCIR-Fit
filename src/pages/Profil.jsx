@@ -5,7 +5,6 @@ import Footer from "../components/Footer.jsx"
 import BulleGPT from '../components/BulleGPT.jsx';
 import DivFooter from "../components/DivFooter.jsx"
 
-import "../components/Body.css"
 
 
 function Profil() {
