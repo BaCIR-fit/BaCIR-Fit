@@ -9,6 +9,7 @@ footer {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    z-index: 100; /* Mise au premier plan */
 }
 
 .button_menu {
