@@ -17,8 +17,6 @@ function Signin() {
         <DivHeader/>
         <Titreh1 texte="Paiement"/>
         <Textep texte={texteAdhesion}/>
-        <InputsInscription placeholder="Email" type="email"/>
-        <InputsInscription placeholder="Mot de passe" type="password"/>
         <br></br>
         <BoutonValidation value="J'adhère" couleur="couleurTrue"/>
         <BoutonValidation value="Je ne souhaite pas adhérer" couleur="couleurFalse"/>
