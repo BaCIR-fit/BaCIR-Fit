@@ -7,7 +7,7 @@ import "../components/Accueil.css"
 function Accueil() {
     return (
       <><Header />
-      <div className="Accueil" style={{ height : "65vh", overflow : "auto"}}>
+      <div className="Accueil" style={{ height : "71vh", overflow : "auto"}}>
         
 
 
