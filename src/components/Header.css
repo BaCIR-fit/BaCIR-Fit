@@ -16,7 +16,7 @@ header {
     justify-content: center;
     z-index: 100; /* Mise au premier plan */
     background-color: rgb(99, 93, 158);
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .header-link {
