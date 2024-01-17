@@ -29,7 +29,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
   const position = [50.633333, 3.066667]; // position lille
 
-//Données qu'il faudra charger sur la page
+//Données qu'il faudra charger sur la page API ALED
 const positionsMarkers = [
     { title: "BaCIR Fit Lille", coordinates: [50.633333, 3.066667], adress: "52 rue du Zouloulou", horaires: "8h-22h", state:"Fermé", freq:"Faible"},
     { title: "BaCIR Fit Panam", coordinates: [48.8566, 2.3522], adress: "52 rue du Zouloulou", horaires: "8h-22h", state:"Ouvert" ,freq:"Modérée"},

@@ -17,6 +17,16 @@ header {
     background-color: rgb(99, 93, 158);
 }
 
+.FakeHeader {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100; /* Mise au premier plan */
+}
+
 .header-link {
     color: #61dafb;
 }
