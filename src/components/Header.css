@@ -1,14 +1,16 @@
 .header-logo {
-    height: 25vmin;
+    height: 15vh;
     pointer-events: none;
 }
 
 header {
     position: fixed;
     width: 100%;
+
     color: white;
     background-color: #282c34;
-    min-height: 10vh;
+    height: 15vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +35,6 @@ header {
 
 .divHeader{
     position: relative;
-    margin-top: 40%;
+    margin-top: 20vh;
 }
 

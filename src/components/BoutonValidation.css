@@ -1,11 +1,22 @@
 .validation input{
-    width: 200px;
+    width: 250px;
+    height: 35px;
     text-align: center;
+    justify-content: center;
     margin: 5px;
-    background-color: rgb(99, 93, 158);;
     border-radius: 15px;
     padding: 5px;
     padding-left: 15px;
-    color: white;
     font-weight: bold;
+    font-size: medium;
+}
+
+.couleurTrue{
+    background-color: rgb(99, 93, 158);
+    color: white;
+}
+
+.couleurFalse{
+    background-color: rgb(238, 238, 238);
+    color: rgb(99, 93, 158);
 }
