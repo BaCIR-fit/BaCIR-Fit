@@ -1,6 +1,8 @@
 import 'leaflet/dist/leaflet.css'; // Importez les styles de Leaflet
 import React from 'react';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import L from 'leaflet';
+import { MapContainer, Marker, Popup, TileLayer, HOCMarker } from 'react-leaflet';
+import icon from '../icons/location-dot.svg';
 
 const Map = ({ center, zoom, markerPosition }) => {
 const mapContainerStyle = {
@@ -9,7 +11,18 @@ const mapContainerStyle = {
     margin: 'auto auto', // Ajoutez cette ligne pour centrer le conteneur
     
 };
-const position = [50.633333,3.066667]
+
+
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    iconSize: [30, 30],
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
+
+const position = [50.633333,3.066667] // position lille
+
+
 
 return (
 <MapContainer center={position} zoom={12} style={mapContainerStyle}>
@@ -19,8 +32,10 @@ return (
     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
     />
     
+    
 
     <Marker position={markerPosition}>
+        
         <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
