@@ -14,7 +14,7 @@ function Qrcode() {
       <Header />
       <body>
       
-        <div className="qrcodeZone" style={{marginTop : "20vh"}}>
+        <div className="qrcodeZone" >
 
           <div style={{ margin: "0 auto", maxWidth: Window.width }}>
             

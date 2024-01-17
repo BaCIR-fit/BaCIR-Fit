@@ -6,11 +6,13 @@ import "../components/Accueil.css"
 
 function Accueil() {
     return (
-      <div className="Accueil" style={{height: "1000px", overflowY : "scroll"}}>
-        <Header />
+      <><Header />
+      <div className="Accueil" style={{ height : "65vh", overflow : "auto"}}>
+        
 
 
-        <div className="div_presentation" style={{marginTop : "18vh"}}>
+        <div className="div_presentation">
+
 
           <h2 className="slogan"> FORME, FORCE, FUN </h2>
 
@@ -68,12 +70,9 @@ function Accueil() {
 
 
         
-
-        
-        
-        {/* <Infos title="info"/> */}
-        <Footer />
       </div>
+      <Footer />
+      </>
     );
   }
   
