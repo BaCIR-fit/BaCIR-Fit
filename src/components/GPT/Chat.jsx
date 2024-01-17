@@ -27,8 +27,12 @@ function Chat() {
     }, [assistant]);
 
     const initChatBot = async () => {
+        const api_key = process.env.REACT_APP_API_KEY;
+
+        console.log(api_key);
+
         const openai = new OpenAI({
-            apiKey: process.env.API_KEY,
+            apiKey: api_key,
             dangerouslyAllowBrowser: true,
         });
 
