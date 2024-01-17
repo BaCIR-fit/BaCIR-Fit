@@ -12,7 +12,7 @@ function Signin() {
       <div className="Signin">
         <Header />
         <body>
-          <Titreh1 placeholder="Créer un compte"/>
+          <Titreh1 texte="Créer un compte"/>
           <InputsInscription placeholder="Nom" type="text"/>
           <InputsInscription placeholder="Prenom" type="text"/>
           <InputsInscription placeholder="Pseudo" type="text"/>

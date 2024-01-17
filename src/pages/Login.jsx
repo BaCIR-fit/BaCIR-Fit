@@ -9,9 +9,9 @@ import DivFooter from "../components/DivFooter.jsx"
 function Signin() {
     return (
       <div className="Signin">
-        <Header />
+        <Header/>
         <body>
-          <Titreh1 placeholder="Connexion"/>
+          <Titreh1 texte="Connexion"/>
           <InputsInscription placeholder="Email" type="email"/>
           <InputsInscription placeholder="Mot de passe" type="password"/>
           <br></br>
