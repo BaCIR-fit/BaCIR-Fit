@@ -1,21 +1,19 @@
 import React from 'react'
 import Header from "../components/Header.jsx"
+import DivHeader from '../components/DivHeader.jsx';
 import Infos from "../components/Infos.jsx"
 import Footer from "../components/Footer.jsx"
-
-import "../components/Body.css"
-
+import BulleGPT from '../components/BulleGPT.jsx';
 
 function Profil() {
     return (
-      <body>
       <div className="Profil">
-        <Header />
+        <Header /> <DivHeader/>
         <Infos title="info"/>
         <Infos title="info"/>
+        <BulleGPT />
         <Footer />
       </div>
-      </body>
     );
   }
   
