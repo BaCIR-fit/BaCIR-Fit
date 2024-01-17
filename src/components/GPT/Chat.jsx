@@ -28,7 +28,7 @@ function Chat() {
 
     const initChatBot = async () => {
         const openai = new OpenAI({
-            apiKey: "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",
+            apiKey: process.env.API_KEY,
             dangerouslyAllowBrowser: true,
         });
 
