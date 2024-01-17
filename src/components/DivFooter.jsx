@@ -1,7 +1,7 @@
 import React from "react"
-import logo from '../logo.svg'
 
-import "./Header.css"
+
+import "./Footer.css"
 
 
 const DivFooter = () => {

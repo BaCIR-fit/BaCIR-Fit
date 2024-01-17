@@ -1,5 +1,5 @@
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0px;
     left: 0;
     width: 100%;
@@ -38,6 +38,7 @@ img {
 
 .divFooter{
     position: relative;
-    margin-top: 20%;
-    background-color: blue;
+    height: 19vw;
+    margin-bottom: 30px;
 }
+

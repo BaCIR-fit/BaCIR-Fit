@@ -1,0 +1,154 @@
+body{
+    font-weight:700;
+}
+
+.div_presentation_text{
+    display : grid;
+    grid-template-columns: 2fr 2fr;
+    position:relative; 
+    margin : 0 0;
+}
+
+.image_presentation{
+    grid-column: 2/3;
+    position:relative;
+    padding : 0 0 ;
+    width : 100%;
+    align-content: center;
+}
+
+
+.text_slogan{
+    grid-column: 1/2;
+
+    align-content: center;
+    font-size : 15px;
+    
+}
+
+.intext_slogan{
+    font-weight: bolder;
+    font-size: 12px;
+    margin : 0px 10px;
+    text-align: right;
+}
+
+
+.slogan{
+    margin : 10 0;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: xx-large;
+    z-index:3;
+    text-align:center;
+    color: rgb(187, 171, 244);
+}
+
+
+/************** COURS *************/
+
+.div_cours h2{
+    color: rgb(187, 171, 244);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight:700;
+    text-align:center;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.div_cours_text{
+    display : grid;
+    grid-template-columns: 2fr 2fr;
+    position:relative; 
+    /* width : 350px; */
+    margin : 0 0;
+}
+.image_cours{
+    grid-column: 1/2;
+    position:relative;
+    /* left:40%; */
+    padding : 0 0 ;
+    width : 100%;
+    align-content: center;
+}
+
+
+.text_cours{
+    grid-column: 2/3;
+
+    align-content: center;
+    font-size : 15px;
+}
+
+.intext_cours{
+    font-weight: bolder;
+    font-size: 12px;
+    margin : 0px 10px;
+    text-align: left;
+}
+
+.inscription_cours{
+    margin: 15px 10px;
+    padding : 5px 5px;
+    width: 100px;
+    align-content: center;
+    background-color : rgb(191,205,48);
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+/************** FORFAITS *************/
+
+.div_abo h2{
+    color: rgb(187, 171, 244);
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-weight:700;
+    text-align:center;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.div_forfait_text{
+    display : grid;
+    grid-template-columns: 2fr 2fr;
+    position:relative; 
+    /* width : 350px; */
+    margin : 0 0;
+}
+
+.div_abo_1{
+    grid-column: 1/2;
+    background-color : rgba(187, 171, 244, 0.3);
+    margin: 15px 25px;
+    border-radius: 10px;
+    align-content: center;
+    font-size : 15px;
+}
+
+.div_abo_2{
+    grid-column: 2/3;
+    background-color : rgba(187, 171, 244, 0.3);
+    margin: 15px 25px;
+    border-radius: 10px;
+    align-content: center;
+    font-size : 15px;
+}
+
+.div_forfait_text h4{
+    color:rgb(97,93,155);
+    font-weight: bolder;
+    margin : 0 0;
+    margin-top: 10px;
+}
+.div_forfait_text h3{
+    color:white;
+    font-weight: bolder;
+    margin : 5px 0;
+    font-size: xx-large;
+}
+
+
