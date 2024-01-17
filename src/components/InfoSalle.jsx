@@ -29,7 +29,7 @@ const InfoSalle = (props) => {
             <div>
                 <img src={logo} className="header-logo" alt="logo" />
             </div>
-            <div>
+            <div id='ZoneTxtSalle'>
                 <div>
                 <span className='BoldViolet'>{props.title}</span>
                 </div>
