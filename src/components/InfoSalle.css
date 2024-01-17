@@ -1,0 +1,34 @@
+.SalleData {
+    display: flex;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    border: solid 2px rgb(99, 93, 158);
+}
+.SalleData > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.SalleData img {
+    margin-right: 10px;
+}
+
+
+.Low {
+    color: green;
+}
+
+.Moderate {
+    color: orange;
+}
+
+.High {
+    color: red;
+}
+.BoldViolet{
+    font-weight: bold;
+    color:rgb(99, 93, 158);
+
+}

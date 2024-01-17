@@ -17,6 +17,7 @@
     "leaflet": "^1.9.4",
     "npm": "^10.3.0",
     "react": "^18.2.0",
+    "react-calendar": "^4.8.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.4",
     "react-leaflet": "^4.2.1",
