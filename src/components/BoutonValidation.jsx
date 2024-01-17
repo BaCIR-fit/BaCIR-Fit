@@ -6,7 +6,7 @@ import "./BoutonValidation.css"
 const BoutonValidation = (props) => {
     return (
         <div className="validation">
-            <input type="button" placeholder={props.placeholder} value={props.value}required />
+            <input type="button" placeholder={props.placeholder} value={props.value}className={props.couleur} required />
         </div>
     )
 }
