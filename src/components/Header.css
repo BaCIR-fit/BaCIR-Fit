@@ -9,22 +9,18 @@ header {
     width: 100%;
     color: white;
     background-color: #282c34;
-    height: 15vh;
+    height: 32vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 100; /* Mise au premier plan */
     background-color: rgb(99, 93, 158);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .header-link {
     color: #61dafb;
 }
 
-.divHeader{
-    position: relative;
-    margin-top: 20vh;
-}
 

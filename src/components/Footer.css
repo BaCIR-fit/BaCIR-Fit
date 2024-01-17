@@ -1,9 +1,9 @@
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0px;
     left: 0;
     width: 100%;
-    height: 9vh;
+    height: 19vw;
     background-color: rgb(99, 93, 158);
     padding: 2.5% 0%;
     display: flex;
@@ -38,6 +38,7 @@ img {
 
 .divFooter{
     position: relative;
-    margin-top: 20%;
-    background-color: blue;
+    height: 19vw;
+    margin-bottom: 30px;
 }
+
