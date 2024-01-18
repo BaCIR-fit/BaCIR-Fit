@@ -34,13 +34,13 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 //Données qu'il faudra charger sur la page API ALED
 
-
 // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
 //onClose();  // Fermer le modal après la sauvegarde
 function handlePage(){
    fetch('https://apibacir.fly.dev/admin/clubs/getAllClubs/2',{
     method:'GET',
     headers: {
+    // '':'',
       'Content-type': 'application/json; charset=UTF-8',
     }})
     .then(response => response.json())

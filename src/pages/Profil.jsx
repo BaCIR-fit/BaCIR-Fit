@@ -19,15 +19,16 @@ import { useEffect } from 'react';
 // };
 
 function Profil() {
-  const [userData,setUserData] = useState({})
+  // const [userData,setUserData] = useState({})
 
   if(sessionStorage.getItem("user_data") === null){
     window.location.pathname = "/login"
     return
   }
 
-  setUserData(JSON.parse(sessionStorage.getItem("user_data")))
-
+  // setUserData()
+  // console.log
+  let userData = JSON.parse(sessionStorage.getItem("user_data"))
   const user_data = {
     surname: userData.last_name,
     name: userData.first_name,

@@ -5,7 +5,7 @@ import QRCode from 'react-qr-code';
 import "../components/Qrcode.css"
 import DivFooter from "../components/DivFooter.jsx"
 import { useState,useEffect } from 'react';
-
+import { Button } from '@mui/base';
 
 
 function Qrcode() {
@@ -15,7 +15,10 @@ function Qrcode() {
     localStorage.setItem('user_id', JSON.stringify(userId));
   }, [userId]);
   
-
+  const handleRedirect = () => {
+    window.location.pathname = "/login"
+  }
+  if(sessionStorage.getItem("user_data")){
   return (
     <div className="Qrcode" style={{height : Window.height}}>
       <Header />
@@ -25,23 +28,30 @@ function Qrcode() {
 
           <div style={{ margin: "0 auto", maxWidth: Window.width }}>
             
-            <QRCode style={{width : "80vw", height : "50vh", margin : "0 auto"}} value={localStorage.getItem("qr_code")} />
+            <QRCode style={{width : "80vw", height : "50vh", margin : "0 auto"}} value={sessionStorage.getItem("user_data")} />
 
           </div>
-
-    
-          <div className="idZone">
-            {/* <p> ID :</p> */}
-            {/* <p> {userId} </p> */}
-          </div>
-
         </div>
         <DivFooter/>
       </body>
 
       <Footer />
     </div>
-  );
+  );} else {
+    return (
+      <div className="Qrcode" style={{height : Window.height}}>
+      <Header />
+      <body>
+      <Button variant="contained" onClick={handleRedirect} className="modalButton" style={{width: '40%', backgroundColor: '#635d9e'}} >
+          Connexion
+        </Button>
+    <DivFooter/>
+      </body>
+
+      <Footer />
+    </div>
+    )
+  }
 }
 
 export default Qrcode;
