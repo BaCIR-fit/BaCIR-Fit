@@ -1,29 +1,50 @@
-import React from "react"
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
+import React, { useState } from 'react';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import Container from '@mui/material/Container';
-import { useState } from "react";
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
 
 import "../components/Calendrier.css"
 
 
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
+
 function Calendrier() {
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [isDejaInscrit, setIsDejaInscrit] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
 
+    // Gere l'evenement
     const handleEventClick = (info) => {
         setSelectedEvent(info.event); // accet aux informations de l'événement cliqué via `info.event`
         setIsDejaInscrit(info.event.extendedProps.isDejaInscrit || false);
-        console.log(info.event.extendedProps.isDejaInscrit)
+        setModalOpen(true);
     };
 
     // Inscrit ou désincrit l'utilisateur
     const toggleInscription = () => {
         setIsDejaInscrit((isDejaInscrit) => !isDejaInscrit);
-        console.log("Inversé")
     };
+
+    const handleCloseModal = () => {
+        setModalOpen(false);
+    };
+    
     
     return (
         <Container className="container">
@@ -64,8 +85,8 @@ function Calendrier() {
                 } }
                 // Liste des événements à afficher sur le calendrier
                 events = { [
-                    { title: 'Event 1', start: '2024-01-20T10:00:00', end: '2024-01-20T12:00:00', extendedProps: { isDejaInscrit: false } },
-                    { title: 'Event 2', start: '2024-01-20T14:00:00', end: '2024-01-20T16:00:00', extendedProps: { isDejaInscrit: false } },
+                    { title: 'Zumba café', start: '2024-01-18T10:00:00', end: '2024-01-18T12:00:00', extendedProps: { isDejaInscrit: false } },
+                    { title: 'Aquaponey', start: '2024-01-20T14:00:00', end: '2024-01-20T16:00:00', extendedProps: { isDejaInscrit: false } },
                 ] }
                 slotMinTime = "07:00:00" // Heure de début des plages horaires
                 slotMaxTime = "23:00:00" // Heure de fin des plages horaires
@@ -86,14 +107,30 @@ function Calendrier() {
                         {" "}
                         Fin: {selectedEvent.end ? selectedEvent.end.toLocaleString() : ""}{" "}
                     </p>
-                    {
-                        <button onClick = { toggleInscription }>
-                            { isDejaInscrit ? "Se désinscrire" : "S'inscrire" }
-                        </button>
-                    }
+                    <button onClick = { toggleInscription }> { isDejaInscrit ? "Se désinscrire" : "S'inscrire" } </button>
                 </div>
             ) }
+            <Modal
+                open = { modalOpen }
+                onClose = { handleCloseModal }
+                aria-labelledby = "modal-modal-title"
+                aria-describedby = "modal-modal-description"
+            >
+                <Box sx = {style}>
+                    <Typography id = "modal-modal-title" variant = "h6" component = "h2">
+                        { selectedEvent ? selectedEvent.title : 'Event Title' }
+                    </Typography>
 
+                    <Typography id="modal-modal-description" sx = { { mt: 2 } }>
+                        { selectedEvent ? selectedEvent.start?.toLocaleString() : 'Start Time' } - { ' ' }
+                        { selectedEvent ? selectedEvent.end?.toLocaleString() : 'End Time' }
+                    </Typography>
+
+                    <Button onClick = { toggleInscription }>
+                        { isDejaInscrit ? 'Se désinscrire' : "S'inscrire" }
+                    </Button>
+                </Box>
+            </Modal>
         </Container>
     );
 }
