@@ -31,6 +31,7 @@ function Signin() {
       method:'POST',
       body:JSON.stringify(updatedSettings),
       headers: {
+        'accept':'application/json',
         'Content-type': 'application/json; charset=UTF-8',
       }})
     .then(response => response.json())
