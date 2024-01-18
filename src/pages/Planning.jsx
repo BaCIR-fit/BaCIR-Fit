@@ -35,12 +35,12 @@ function Planning() {
   return (
     <div className="Planning" style={{ height: '89vh', overflow: 'auto' }}>
       <Header />
-      <body>
+      <div>
         <SelectPlanning data={initialData} onSalleChange={handleSalleChange} />
 
         <Calendrier data={filteredData} />
         <DivFooter />
-      </body>
+      </div>
       <Footer />
     </div>
   );
