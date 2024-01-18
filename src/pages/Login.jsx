@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { TextField,Button } from '@mui/material';
 import "./Login.css"
 // import mod
+import Cookies from 'universal-cookie';
 
 function Signin() {
 
@@ -41,6 +42,9 @@ function Signin() {
         sessionStorage.setItem("SessionID",data.data.token)
 
         localStorage.setItem("qr_code",data.data.qr_code)
+        const cookies = new Cookies();
+      cookies.set('SessionID',data.data.token, { path: '/' });
+
         sessionStorage.setItem("user_data",data.data.user_data);
         // console.log(data)
       } catch {
