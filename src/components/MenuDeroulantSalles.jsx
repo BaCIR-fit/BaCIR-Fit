@@ -12,8 +12,16 @@ const MenuDeroulantSalles = (props) => {
     if (props.data && props.data.length > 0) {
       const uniqueSalles = Array.from(new Set(props.data.map(event => event.salle)));
       setSalleOptions(uniqueSalles);
+
+      // Mettre le premier élément en valeur par défaut
+      if (uniqueSalles.length > 0 && !selectedSalle) {
+        setSelectedSalle(uniqueSalles[0]);
+        if (props.onSalleChange) {
+          props.onSalleChange(uniqueSalles[0]);
+        }
+      }
     }
-  }, [props.data]);
+  }, [props.data, selectedSalle, props.onSalleChange]);
 
   const handleChange = (event) => {
     const selectedSalle = event.target.value;
