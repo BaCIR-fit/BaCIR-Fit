@@ -132,9 +132,9 @@ const [selectedGender, setSelectedGender] = useState('');
             value={selectedGender}
             onChange={handleChangeGender}
             >
-            <MenuItem value="male">Homme</MenuItem>
-            <MenuItem value="female">Femme</MenuItem>
-            <MenuItem value="other">Autre</MenuItem>
+            <MenuItem value="Homme">Homme</MenuItem>
+            <MenuItem value="Femme">Femme</MenuItem>
+            <MenuItem value="Autre">Autre</MenuItem>
           </Select>
         </FormControl>
 
