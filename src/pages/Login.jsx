@@ -13,7 +13,7 @@ function Signin() {
 
   const [settings] = useState({
     email: "",
-    password: "",
+    password:""
   });
   const [updatedSettings, setUpdatedSettings] = useState(settings);
 
@@ -32,6 +32,7 @@ function Signin() {
       try{ 
         localStorage.setItem("SessionID",data.data.token)
         localStorage.setItem("qr_code",data.data.qr_code)
+        sessionStorage.setItem("user_data",data.data.user_data);
         // console.log(data)
       } catch {
         console.log(data.message)
@@ -62,6 +63,7 @@ function Signin() {
             value={paramValue}
             onChange={handleChange}
             className="modalInput"
+            type={paramName=="password"?"password":"input"}
           />
         ))}
         <Button variant="contained" onClick={handleSubmit} className="modalButton">
