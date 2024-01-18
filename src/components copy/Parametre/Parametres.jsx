@@ -1,7 +1,6 @@
 // Parametres.js
 import React from 'react';
 import './Parametres.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Parametres = () => {
   return (
@@ -9,14 +8,13 @@ const Parametres = () => {
     <ul>
         <li><a href="#gerer-abonnement">Gérer mon abonnement</a></li>
         <li><a href="#mes-informations">Mes informations</a></li>
-        <li><Link to="/historique"> Mes visites </Link></li>
+        <li><a href="#mes-visites">Mes visites</a></li>
     </ul>
     <button id="deco">Déconnexion</button>
       
     </div>
   );
 };
-
 
 
 

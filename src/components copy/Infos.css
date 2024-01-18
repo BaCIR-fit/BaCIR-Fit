@@ -1,0 +1,18 @@
+p {
+    font-size: 10px;
+    color: #333; /* Couleur du texte dans le cadre 
+}
+
+.info {
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2%;
+    border: 2px solid #333; /* Couleur de la bordure du cadre */
+    border-radius: 10px; /* Bords arrondis */
+    background-color: #fff; /* Couleur de fond du cadre */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre du cadre */
+}
+

@@ -1,0 +1,39 @@
+.SalleData {
+    display: flex;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    border: solid 2px rgb(99, 93, 158);
+}
+.SalleData > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.SalleData img {
+    margin-right: 10px;
+}
+
+#ZoneTxtSalle {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Modifié pour aligner à gauche */
+    text-align: left;
+    height: 100vh;
+    z-index: 100; /* Mise au premier plan */
+}
+
+#ZoneTxtSalle > div {
+    margin-bottom: 5px; /* Ajout de marge entre les éléments pour une meilleure lisibilité */
+}
+
+#IconZone{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100; /* Mise au premier plan */
+}

@@ -1,0 +1,35 @@
+/*ul {
+  list-style: none;
+  padding: 0;
+}*/
+/*
+li {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  margin-right: 10px;
+}
+/*
+p {
+  margin: 5px 0;
+}
+*/
+/* Mettez en gras le texte contenu dans une balise <strong> */
+p strong {
+  font-weight: bold;
+}
+
+/* Ajoutez une ligne entre chaque entrainement */
+li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}

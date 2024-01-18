@@ -1,0 +1,38 @@
+.header-logo {
+    height: 15vh;
+    pointer-events: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    color: white;
+    background-color: #282c34;
+    height: 32vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100; /* Mise au premier plan */
+    background-color: rgb(99, 93, 158);
+    margin-bottom: 15px;
+}
+
+.header-link {
+    color: #61dafb;
+}
+
+.header-settings{
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.25s; 
+    height: 7vh;
+    top: 5%; /* Adjust the top position */
+    right: 5%; /* Adjust the right position */
+    position : fixed;
+
+}
+
