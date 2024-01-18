@@ -1,51 +1,51 @@
+import React, { useEffect, useState } from 'react';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import React, { useEffect, useState } from 'react';
 
 const MenuDeroulantSalles = (props) => {
-  const [salleOptions, setSalleOptions] = useState([]);
-  const [selectedSalle, setSelectedSalle] = useState('');
+  const [clubOptions, setClubOptions] = useState([]);
+  const [selectedClub, setSelectedClub] = useState('');
 
   useEffect(() => {
     if (props.data && props.data.length > 0) {
-      const uniqueSalles = Array.from(new Set(props.data.map(event => event.salle)));
-      setSalleOptions(uniqueSalles);
+      const uniqueClubs = Array.from(new Set(props.data.map(club => club.club_name)));
+      setClubOptions(uniqueClubs);
 
       // Mettre le premier élément en valeur par défaut
-      if (uniqueSalles.length > 0 && !selectedSalle) {
-        setSelectedSalle(uniqueSalles[0]);
-        if (props.onSalleChange) {
-          props.onSalleChange(uniqueSalles[0]);
+      if (uniqueClubs.length > 0 && !selectedClub) {
+        setSelectedClub(uniqueClubs[0]);
+        if (props.onClubChange) {
+          props.onClubChange(uniqueClubs[0]);
         }
       }
     }
-  }, [props.data, selectedSalle, props.onSalleChange]);
+  }, [props.data, selectedClub, props.onClubChange]);
 
   const handleChange = (event) => {
-    const selectedSalle = event.target.value;
-    setSelectedSalle(selectedSalle);
+    const selectedClub = event.target.value;
+    setSelectedClub(selectedClub);
 
-    // Appeler la fonction de rappel pour informer le composant parent du changement de salle
-    if (props.onSalleChange) {
-      props.onSalleChange(selectedSalle);
+    // Appeler la fonction de rappel pour informer le composant parent du changement de club
+    if (props.onClubChange) {
+      props.onClubChange(selectedClub);
     }
   };
 
   return (
-    <FormControl fullWidth style={{width : "80%", margin : "10px"}}>
-      <InputLabel id="salle-select-label">Choisissez une salle</InputLabel>
+    <FormControl fullWidth style={{ width: '80%', margin: '10px' }}>
+      <InputLabel id="club-select-label">Choisissez un club</InputLabel>
       <Select
-        labelId="salle-select-label"
-        id="salle-select"
-        value={selectedSalle}
-        label="Choisissez une salle"
+        labelId="club-select-label"
+        id="club-select"
+        value={selectedClub}
+        label="Choisissez un club"
         onChange={handleChange}
       >
-        {salleOptions.map((salle) => (
-          <MenuItem key={salle} value={salle}>
-            {salle}
+        {clubOptions.map((club) => (
+          <MenuItem key={club} value={club}>
+            {club}
           </MenuItem>
         ))}
       </Select>
