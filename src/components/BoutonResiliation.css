@@ -1,0 +1,26 @@
+/* BoutonResiliation.css */
+
+.resiliation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Optional: This will center the button vertically within the viewport */
+}
+  
+  .Bouton-resiliation{
+    padding: 10px 20px;
+  font-size:30px;
+  background-color: #ff0000; /* Replace with your desired background color */
+  color: #ffffff; /* Replace with your desired text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position : fixed;
+  top:50%;
+  }
+  
+  button:hover {
+    background-color: #cc0000; /* Replace with a darker shade for hover effect */
+  }
+  
