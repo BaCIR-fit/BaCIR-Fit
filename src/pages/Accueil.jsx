@@ -1,15 +1,16 @@
 import React from 'react'
 import Header from "../components/Header.jsx"
-import Infos from "../components/Infos.jsx"
 import Footer from "../components/Footer.jsx"
 import "../components/Accueil.css"
 
+
 function Accueil() {
     return (
-      <><Header />
+      
+      
       <div className="Accueil" style={{ height : "71vh", overflow : "auto"}}>
-        
-
+        <Header/>
+        <body>
 
         <div className="div_presentation">
 
@@ -68,11 +69,11 @@ function Accueil() {
        
         </div>
 
-
-        
+        </body>
+        <Footer />
       </div>
-      <Footer />
-      </>
+      
+      
     );
   }
   
