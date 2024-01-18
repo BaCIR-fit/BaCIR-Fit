@@ -23,4 +23,16 @@ header {
     color: #61dafb;
 }
 
+.header-settings{
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.25s; 
+    height: 7vh;
+    top: 5%; /* Adjust the top position */
+    right: 5%; /* Adjust the right position */
+    position : fixed;
+
+}
 

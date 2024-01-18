@@ -40,3 +40,16 @@
     cursor: pointer;
     transition-duration: 0.25s;
 }
+
+.croix{
+  color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 7vh;
+    width: 7vh;
+    position : fixed;
+    top: 1%; /* Adjust the top position */
+    right: 1%; /* Adjust the right position */
+    
+}
