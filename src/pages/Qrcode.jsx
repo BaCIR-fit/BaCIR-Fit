@@ -25,14 +25,14 @@ function Qrcode() {
 
           <div style={{ margin: "0 auto", maxWidth: Window.width }}>
             
-            <QRCode style={{width : "80vw", height : "50vh", margin : "0 auto"}} value={{userId}} />
+            <QRCode style={{width : "80vw", height : "50vh", margin : "0 auto"}} value={localStorage.getItem("qr_code")} />
 
           </div>
 
     
           <div className="idZone">
-            <p> ID :</p>
-            <p> {userId} </p>
+            {/* <p> ID :</p> */}
+            {/* <p> {userId} </p> */}
           </div>
 
         </div>
