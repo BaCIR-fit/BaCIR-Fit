@@ -6,8 +6,7 @@ import Footer from "../components/Footer.jsx"
 import Titreh1 from '../components/Titreh1.jsx';
 import DivFooter from "../components/DivFooter.jsx"
 import { useState } from 'react';
-import { TextField } from '@mui/material';
-import {Button} from '@mui/material';
+import { TextField,Button } from '@mui/material';
 
 
 function Signin() {
@@ -29,9 +28,12 @@ function Signin() {
         'Content-type': 'application/json; charset=UTF-8',
       }})
     .then(response => response.json())
-    .then(data => localStorage.setItem("SessionID",data.data.token))
-    // .then()
-    // .then(data => this.setState({ totalReactPackages: data.total }));
+    .then(data => {
+      try{ 
+        localStorage.setItem("SessionID",data.data.token)
+      } catch {
+        console.log(data.message)
+      }})
 
   };
 
