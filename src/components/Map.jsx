@@ -68,8 +68,7 @@ function handlePage(){
 handlePage()
 let positionsMarkers = [];
 positionsMarkers = JSON.parse(localStorage.getItem("test"))
-console.log("out", positionsMarkers);
-console.log(selectedMarker);
+
 return (
     <>
     <MapContainer center={position} zoom={12} style={mapContainerStyle}>
@@ -92,7 +91,7 @@ return (
 
     </MapContainer>
 
-    {infoSalleVisible && selectedMarker && (
+    {infoSalleVisible && (selectedMarker != null) && (
         <InfoSalle
             title={selectedMarker.club_name}
             adress={selectedMarker.adress}

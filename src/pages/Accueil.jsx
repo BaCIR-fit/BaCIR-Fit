@@ -21,7 +21,8 @@ function Accueil() {
           <div className="div_presentation_text">
 
             <div className="text_slogan">
-              <div className="intext_slogan"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id metus ut odio egestas ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id metus ut odio egestas ullamcorper. 
+              <div className="intext_slogan"> 
+              BaCIR Fit : Là où chaque séance devient une victoire! Découvrez nos salles de sport ultramodernes, programmes exclusifs, et une communauté motivée. Transformez votre fitness, transformez votre vie. Joignez-vous à BaCIR Fit pour exceller et briller !
               </div>
             </div>
               
@@ -40,7 +41,7 @@ function Accueil() {
             <img src="https://www.salsadanse.com/wp-content/uploads/2020/07/cours-de-zumba-latin-training-paris-4.jpg" alt="Logo" className="image_cours"/>
             
             <div className="text_cours">
-              <div className="intext_cours">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id metus ut odio egestas ullamcorper. </div>
+              <div className="intext_cours">Nos coachs certifiés se feront un plaisir de vous aider et vous enseigner de nouvelles disciplnes (crossfit, zumba …) </div>
               
               <div className="inscription_cours" >
                 <Link to="/planning" className="inscription_link">
