@@ -11,18 +11,6 @@ import React, { useState } from 'react';
 import "../components/Calendrier.css";
 
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-};
-
 function Calendrier(props){
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [isDejaInscrit, setIsDejaInscrit] = useState(false);
@@ -52,6 +40,7 @@ function Calendrier(props){
                 plugins = { [ timeGridPlugin, interactionPlugin ] }
                 initialView = "timeGridWeek" // Vue initiale du calendrier
                 locale = "fr" // Langue du calendrier
+                firstDay={1} // Commence par Lundi
 
                 // Configuration de la barre d'outils du calendrier
                 headerToolbar = { {
