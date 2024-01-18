@@ -64,6 +64,7 @@ function Signin() {
             value={paramValue}
             onChange={handleChange}
             className="modalInput"
+            type={paramName=="password"?"password":"input"}
           />
         ))}
         <Button variant="contained" onClick={handleSubmit} className="modalButton">

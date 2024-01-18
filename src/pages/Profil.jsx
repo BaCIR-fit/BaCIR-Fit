@@ -5,8 +5,10 @@ import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
 import InfoCompte from "../components/InfoCompte.jsx";
 import { useState } from 'react';
-import { useEffect } from 'react';
+import { Route, Router, redirect } from "react-router-dom";
 
+import { Login } from '@mui/icons-material';
+import { useEffect } from 'react';
 // const userData = {
 //   surname: sessionStorage.getItem("user_data").first_name,
 //   name: sessionStorage.getItem("user_data").last_name,
@@ -17,9 +19,14 @@ import { useEffect } from 'react';
 // };
 
 function Profil() {
+  const [userData,setUserData] = useState({})
 
-  const [userData,setUserData] = useState(JSON.parse(sessionStorage.getItem("user_data")))
-  // console.log(JSON.parse(userData))
+  if(sessionStorage.getItem("user_data") === null){
+    window.location.pathname = "/login"
+    return
+  }
+
+  setUserData(JSON.parse(sessionStorage.getItem("user_data")))
 
   const user_data = {
     surname: userData.last_name,
