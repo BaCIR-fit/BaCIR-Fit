@@ -9,6 +9,7 @@ import DivFooter from '../components/DivFooter.jsx';
 // import { Form } from 'react-router-dom';
 import { useState } from 'react';
 import { TextField,Button } from '@mui/material';
+
 function Signin() {
   
   const [settings] = useState({
@@ -25,7 +26,7 @@ function Signin() {
     // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
     //onClose();  // Fermer le modal après la sauvegarde
     console.log(updatedSettings)
-    fetch('http://38.242.250.170:3000/auth/register',{
+    fetch('https://apibacir.fly.dev/auth/register',{
       method:'POST',
       body:JSON.stringify(updatedSettings),
       headers: {

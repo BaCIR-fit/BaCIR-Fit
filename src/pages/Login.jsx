@@ -8,6 +8,8 @@ import DivFooter from "../components/DivFooter.jsx"
 import { useState } from 'react';
 import { TextField,Button } from '@mui/material';
 import { redirect } from 'react-router-dom';
+import "./Login.css"
+import { width } from '@mui/system';
 // import mod
 
 function Signin() {
@@ -27,7 +29,7 @@ function Signin() {
     // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
     //onClose();  // Fermer le modal après la sauvegarde
     console.log(updatedSettings)
-    fetch('http://38.242.250.170:3000/auth/login',{
+    fetch('https://apibacir.fly.dev/auth/login',{
       method:'POST',
       body:JSON.stringify(updatedSettings),
       headers: {
@@ -71,15 +73,18 @@ function Signin() {
             onChange={handleChange}
             className="modalInput"
             type={paramName=="password"?"password":"input"}
+            size="small"
+            style={{ margin: '8px 0', width: '70%' }}
           />
+
         ))}
-        <Button variant="contained" onClick={handleSubmit} className="modalButton">
-          Login
+        <Button variant="contained" onClick={handleSubmit} className="modalButton" style={{width: '40%', backgroundColor: '#635d9e'}} >
+          Connexion
         </Button>
           <DivFooter/>
         </body>
 
-        <Button variant="contained" onClick={handleRegister} className="modalButton">
+        <Button variant="contained" onClick={handleRegister} className="modalButton" style={{backgroundColor: '#635d9e'}}>
           Créer un compte
         </Button>
         
