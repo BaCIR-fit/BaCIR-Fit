@@ -41,6 +41,7 @@ function Calendrier() {
         setIsDejaInscrit((isDejaInscrit) => !isDejaInscrit);
     };
 
+    // Gere le modal
     const handleCloseModal = () => {
         setModalOpen(false);
     };
@@ -110,13 +111,14 @@ function Calendrier() {
                     <button onClick = { toggleInscription }> { isDejaInscrit ? "Se désinscrire" : "S'inscrire" } </button>
                 </div>
             ) }
+            
             <Modal
                 open = { modalOpen }
                 onClose = { handleCloseModal }
                 aria-labelledby = "modal-modal-title"
                 aria-describedby = "modal-modal-description"
             >
-                <Box sx = {style}>
+                <Box className="box">
                     <Typography id = "modal-modal-title" variant = "h6" component = "h2">
                         { selectedEvent ? selectedEvent.title : 'Event Title' }
                     </Typography>
