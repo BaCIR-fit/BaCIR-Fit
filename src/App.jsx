@@ -12,6 +12,7 @@ import Paiement from './pages/Paiement.jsx';
 
 //import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Settings } from '@mui/icons-material';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/login" element={<Login />} />
           <Route path="/paiement" element={<Paiement />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </Router>
     </div>
