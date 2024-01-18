@@ -15,10 +15,10 @@ const InfoSalle = (props) => {
     let instant = new Date();
 
     // Condition pour déterminer la classe CSS en fonction de la valeur de props.freq pour changer la couleur
-    if (props.capaActu/props.capaMax < 0.35) {
+    if (props.cap_actu/props.cap_max < 0.35) {
         frequentation = "Faible";
         freqClass = "Low";
-    } else if (props.capaActu/props.capaMax > 0.75) {
+    } else if (props.cap_actu/props.capaMax > 0.75) {
         frequentation = "Elevée";
         freqClass = "High";
     } else {
@@ -43,15 +43,15 @@ const InfoSalle = (props) => {
 
             <div id='ZoneTxtSalle'>
                 <div>
-                <span className='BoldViolet'>{props.title}</span>
+                <span className='BoldViolet'>{props.club_name}</span>
                 </div>
 
                 <div>
-                    <span className='BoldViolet'>Adresse : </span>{props.adress}
+                    <span className='BoldViolet'>Adresse : {props.adress}</span>
                 </div>
 
                 <div>
-                    <span className='BoldViolet'>Horaires : </span>{props.horaires}
+                    <span className='BoldViolet'>Horaires : {props.horaires}</span>
                 </div>
 
                 <div>
