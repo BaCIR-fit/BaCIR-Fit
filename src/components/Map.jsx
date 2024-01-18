@@ -13,6 +13,8 @@ const mapContainerStyle = {
     zIndex: '0',
 };
 
+
+
 const [infoSalleVisible, setInfoSalleVisible] = useState(false); //Afficher ou non la case des infos sur la salle
 const [selectedMarker, setSelectedMarker] = useState(null); //Afficher les bonnes datas
 
@@ -31,11 +33,43 @@ L.Marker.prototype.options.icon = DefaultIcon;
   const position = [50.633333, 3.066667]; // position lille
 
 //Données qu'il faudra charger sur la page API ALED
-const positionsMarkers = [
-    { title: "BaCIR Fit Lille", coordinates: [50.633333, 3.066667], adress: "132 rue du Nationale", horaires: "8h-22h", capaActu: 34, capaMax : 250},
-    { title: "BaCIR Fit Panam", coordinates: [48.8566, 2.3522], adress: "52 rue du Zouloulou", horaires: "8h-22h", capaActu: 137, capaMax : 160},
-    { title: "BaCIR Fit Madrid", coordinates: [40.4168, -3.7038], adress: "52 rue du Zoulouloulouloulou", horaires: "8h-22h", capaActu: 56, capaMax : 100},
-];
+
+let positionsMarkers = [];
+
+
+    // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
+    //onClose();  // Fermer le modal après la sauvegarde
+
+    fetch('http://localhost:4000/club/getAllClub/2',{
+      method:'GET',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      }})
+    .then(response => response.json())
+    .then(data => {
+      try{ 
+        localStorage.setItem("club_name",data.data.club_name)
+        console.log("ici"+localStorage.getItem("club_name"));
+        localStorage.setItem("adress",data.data.adress)
+        localStorage.setItem("longitude",data.data.longitude)
+        localStorage.setItem("latitude",data.data.latitude)
+        localStorage.setItem("capaMax",data.data.capaMax)
+        localStorage.setItem("capaActu",data.data.capaActu)
+        positionsMarkers.push({ title: localStorage.getItem("club_name"), coordinates: [localStorage.getItem("latitude"),localStorage.getItem("longitude")], adress: localStorage.getItem("adress"), horaires: "8h-22h", capaActu: localStorage.getItem("capaActu"), capaMax : localStorage.getItem("capaMax")})
+        // console.log(data)
+      } catch {
+        console.log(data.message)
+      }})
+
+  
+  
+  console.log(positionsMarkers);
+// const positionsMarkers = [
+//     { title: "BaCIR Fit Lille", coordinates: [50.633333, 3.066667], adress: "132 rue du Nationale", horaires: "8h-22h", capaActu: 34, capaMax : 250},
+//     { title: "BaCIR Fit Panam", coordinates: [48.8566, 2.3522], adress: "52 rue du Zouloulou", horaires: "8h-22h", capaActu: 137, capaMax : 160},
+//     { title: "BaCIR Fit Madrid", coordinates: [40.4168, -3.7038], adress: "52 rue du Zoulouloulouloulou", horaires: "8h-22h", capaActu: 56, capaMax : 100},
+// ];
+
 
 return (
     <>
@@ -60,13 +94,11 @@ return (
 
     {infoSalleVisible && selectedMarker && (
         <InfoSalle
-            title={selectedMarker.title}
-            adress={selectedMarker.adress}
-            horaires={selectedMarker.horaires}
-            state={selectedMarker.state}
-            capaActu = {selectedMarker.capaActu}
-            capaMax = {selectedMarker.capaMax}
-            freq={selectedMarker.freq}
+            title={localStorage.getItem("club_name")}
+            adress={localStorage.getItem("adress")}
+            horaires={"8h-22h"}
+            capaActu = {localStorage.getItem("capaActu")}
+            capaMax = {localStorage.getItem("capaMax")}
         />
     )}
     </>

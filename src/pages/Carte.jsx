@@ -4,7 +4,9 @@ import Header from '../components/Header.jsx';
 import Map from '../components/Map';
 
 const Carte = () => {
-  const position = [51.505, -0.09]; // Coordonnées de position par défaut
+  const positionLille = [51.505, -0.09]; // Coordonnées de position par défaut
+
+  
 
 return (
 
@@ -16,7 +18,7 @@ return (
         <p style={{ fontWeight: "bold", fontSize: "5vh", margin: "5px 0px" }}>Nos salles :</p>
     </div>
 
-    <Map center={position} zoom={13} markerPosition={position} />
+    <Map center={positionLille} zoom={13} markerPosition={positionLille} />
 
 
     <Footer />
