@@ -1,19 +1,57 @@
-.SalleData {
+/* .SalleData {
     display: flex;
     margin: 15px;
     padding: 10px;
     border-radius: 10px;
-    height: 100%;
+    height: 100%; 
     border: solid 2px rgb(99, 93, 158);
-}
-.SalleData > div {
-    display: flex;
-    flex-direction: column;
+} */
+.SalleData {
+
+    display : grid;
+    grid-template-columns: 20% 80%;
+    position: relative;
+    max-height: 20vh;
+
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px rgb(99, 93, 158);
+    z-index:1;
 }
 
-.SalleData img {
+/* .SalleData > div {
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .SalleData img {
     margin-right: 10px;
+} */
+#ZoneImgSalle{
+    grid-column: 1/2;
+    position:relative;
+    size : 100%;
+    align-items: right;
 }
+
+
+/* #ZoneTxtSalle{
+    /* width: 80%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Mise au premier plan 
+} */
+
+#ZoneTxtSalle{
+    grid-column: 1/2;
+    position:relative;
+
+    align-items: center;
+}
+
 
 
 .Low {
@@ -33,11 +71,4 @@
 
 }
 
-#ZoneTxtSalle{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 100; /* Mise au premier plan */
-}
+

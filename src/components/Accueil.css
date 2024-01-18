@@ -97,6 +97,10 @@ body{
     color: white;
     border-radius: 5px;
 }
+.inscription_link{
+    text-decoration: none;
+    color:white;
+}
 
 
 

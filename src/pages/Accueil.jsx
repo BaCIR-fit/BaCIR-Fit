@@ -2,13 +2,14 @@ import React from 'react'
 import Header from "../components/Header.jsx"
 import Footer from "../components/Footer.jsx"
 import "../components/Accueil.css"
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 function Accueil() {
     return (
       
       
-      <div className="Accueil" style={{ height : "71vh", overflow : "auto"}}>
+      <div className="Accueil" style={{ height : "89vh", overflow : "auto"}}>
         <Header/>
         <body>
 
@@ -42,7 +43,9 @@ function Accueil() {
               <div className="intext_cours">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id metus ut odio egestas ullamcorper. </div>
               
               <div className="inscription_cours" >
-                Inscription  
+                <Link to="/planning" className="inscription_link">
+                  Inscription  
+                </Link>
               </div> 
 
             </div>  
