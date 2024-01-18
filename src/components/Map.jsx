@@ -69,7 +69,7 @@ handlePage()
 let positionsMarkers = [];
 positionsMarkers = JSON.parse(localStorage.getItem("test"))
 console.log("out", positionsMarkers);
-
+console.log(selectedMarker);
 return (
     <>
     <MapContainer center={position} zoom={12} style={mapContainerStyle}>
@@ -85,7 +85,7 @@ return (
                 eventHandlers={{ click: () => toggleInfoSalleVisibility(position) }}
             >
             <Popup>
-                {position.title}
+                {position.club_name}
             </Popup>
             </Marker>
         ))}
@@ -94,11 +94,11 @@ return (
 
     {infoSalleVisible && selectedMarker && (
         <InfoSalle
-            title={positionsMarkers.club_name}
-            adress={positionsMarkers.adress}
+            title={selectedMarker.club_name}
+            adress={selectedMarker.adress}
             horaires={"8h-22h"}
-            capaActu = {positionsMarkers.cap_actu}
-            capaMax = {positionsMarkers.cap_max}
+            capaActu = {selectedMarker.cap_actu}
+            capaMax = {selectedMarker.cap_max}
         />
     )}
     </>
