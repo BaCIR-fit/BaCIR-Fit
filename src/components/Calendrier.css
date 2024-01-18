@@ -56,3 +56,17 @@
     background-color: #1565c0;
     border: 1px solid #2196f3;
 }
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    font-size:small;
+    border-radius: 15px;
+    background-color: white;
+    border: 2px solid #000;
+    box-shadow: 24px;
+    padding: 16px;
+}
