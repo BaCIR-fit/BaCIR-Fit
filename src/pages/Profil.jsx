@@ -10,7 +10,8 @@ const userData = {
   name: "John",
   birth: "01/01/1990",
   gender: "Male",
-  mail: "john.doe@example.com"
+  mail: "john.doe@example.com",
+  active: "Actif",
 };
 
 function Profil() {

@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: flex-start; /* Modifié pour aligner à gauche */
     text-align: left;
+    height: 100vh;
     z-index: 100; /* Mise au premier plan */
 }
 

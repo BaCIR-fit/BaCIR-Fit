@@ -9,18 +9,28 @@ const InfoSalle = (props) => {
     let freqClass = ""; // Classe CSS par défaut
     let freqState = "";
 
+    let frequentation = "";
+    let ouverture = "";
+
+    let instant = new Date();
+
     // Condition pour déterminer la classe CSS en fonction de la valeur de props.freq pour changer la couleur
-    if (props.freq === "Faible") {
+    if (props.capaActu/props.capaMax < 0.35) {
+        frequentation = "Faible";
         freqClass = "Low";
-    } else if (props.freq === "Modérée") {
-        freqClass = "Moderate";
-    } else if (props.freq === "Elevée") {
+    } else if (props.capaActu/props.capaMax > 0.75) {
+        frequentation = "Elevée";
         freqClass = "High";
+    } else {
+        frequentation = "Modérée";
+        freqClass = "Moderate";
     }
 
-    if (props.state === "Ouvert") {
+    if (instant.getHours() >= 8 && instant.getHours() <= 22) {
+        ouverture = "Ouverte";
         freqState = "Low";
-    } else if (props.state === "Fermé") {
+    } else{
+        ouverture = "Fermée";
         freqState = "High";
     }
     
@@ -35,17 +45,21 @@ const InfoSalle = (props) => {
                 <div>
                 <span className='BoldViolet'>{props.title}</span>
                 </div>
+
                 <div>
                     <span className='BoldViolet'>Adresse : </span>{props.adress}
                 </div>
+
                 <div>
                     <span className='BoldViolet'>Horaires : </span>{props.horaires}
                 </div>
+
                 <div>
-                <span className='BoldViolet'>Etat : </span><span className={freqState}>{props.state}</span>
+                <span className='BoldViolet'>Etat : </span><span className={freqState}>{ouverture}</span>
                 </div>
+
                 <div>
-                <span className='BoldViolet'>Fréquentation : </span><span className={freqClass}>{props.freq}</span>
+                <span className='BoldViolet'>Fréquentation : </span><span className={freqClass}>{frequentation}</span>
                 </div>
             </div>
         </div>
