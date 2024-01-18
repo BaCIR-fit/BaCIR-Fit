@@ -92,22 +92,6 @@ function Calendrier(props){
                 eventClick = { handleEventClick } // Ajouter la fonction de rappel pour gérer le clic sur un événement
             />
             
-            { selectedEvent && (
-                <div>
-                    <h2> Détails de l'événement </h2>
-                    <p> Titre: {selectedEvent.title} </p>
-                    <p>
-                        {" "}
-                        Début: {selectedEvent.start ? selectedEvent.start.toLocaleString() : ""}
-                    </p>
-                    <p>
-                        {" "}
-                        Fin: {selectedEvent.end ? selectedEvent.end.toLocaleString() : ""}{" "}
-                    </p>
-                    <button onClick = { toggleInscription }> { isDejaInscrit ? "Se désinscrire" : "S'inscrire" } </button>
-                </div>
-            ) }
-            
             <Modal
                 open = { modalOpen }
                 onClose = { handleCloseModal }
