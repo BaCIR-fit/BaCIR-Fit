@@ -32,7 +32,7 @@ const InfoCompte = (props) => {
                 </div>
 
                 <div>
-                    <span className='BoldViolet'>Compte : </span>{props.user.active}
+                    <span className='BoldViolet'>Compte : </span>{props.user.active == false ? "Inactif":"Actif"}
                 </div>
             </div>
         </div>
