@@ -1,14 +1,15 @@
 import React from 'react'
 import Header from "../components/Parametre/HeaderParametres.jsx"
 import Footer from "../components/Footer.jsx"
-import Entrainements from '../components/Entrainements.jsx'
-function Historique() {
+import Bouton from '../components/BoutonResiliation.jsx'
+
+function Resiliation() {
     return (
       <div className="Accueil">
         <Header />
-        <Entrainements/>
+        <Bouton/>
         <Footer />
       </div>
     );
   }
-  export default Historique 
+  export default Resiliation 

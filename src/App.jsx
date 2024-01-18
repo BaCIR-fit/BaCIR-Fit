@@ -14,6 +14,7 @@ import Historique from './pages/Historique.jsx';
 
 //import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Resiliation from './pages/Resiliation.jsx'
 import { Settings } from '@mui/icons-material';
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/paiement" element={<Paiement />} />
           <Route path="/pageparametres" element={<Parametres />} />
           <Route path="/historique" element={<Historique />} />
+          <Route path="/resiliation" element={<Resiliation />} />
 
         </Routes>
       </Router>

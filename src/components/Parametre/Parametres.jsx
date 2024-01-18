@@ -23,7 +23,7 @@ const Parametres = () => {
   return (
     <div>
     <ul>
-        <li><a href="#gerer-abonnement">Gérer mon abonnement</a></li>
+        <li><Link to="/resiliation">Résilier mon abonnement</Link></li>
         <li><a href="#mes-informations">Mes informations</a></li>
         <li><Link to="/historique"> Mes visites </Link></li>
     </ul>
