@@ -24,7 +24,6 @@ const Parametres = () => {
     <div>
     <ul>
         <li><Link to="/resiliation">Résilier mon abonnement</Link></li>
-        <li><a href="#mes-informations">Mes informations</a></li>
         <li><Link to="/historique"> Mes visites </Link></li>
     </ul>
     <button id="deco" onClick={handleDeconnexion}>Déconnexion</button>
