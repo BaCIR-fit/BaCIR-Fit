@@ -39,6 +39,8 @@ function Signin() {
     .then(data => {
       try{ 
         localStorage.setItem("SessionID",data.data.token)
+        sessionStorage.setItem("SessionID",data.data.token)
+
         localStorage.setItem("qr_code",data.data.qr_code)
         const cookies = new Cookies();
       cookies.set('SessionID',data.data.token, { path: '/' });
