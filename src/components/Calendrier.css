@@ -33,7 +33,7 @@
 }
 
 /* Style des jours de la semaine dans l'en-tête du calendrier */
-.fc-col-header-cell {
+.fc-col-header-cell-cushion {
     background-color:rgb(220, 220, 241);
     font-weight: bold; /* Police en gras */
     font-size: 95%; /* Taille du texte */
@@ -46,6 +46,7 @@
 
 /* Style des événements sur le calendrier */
 .fc-event {
+    font-size: 65%;
     background-color: #2196f3;
     color: #ffffff;
     border: 1px solid #2196f3;
@@ -63,7 +64,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    font-size:small;
     border-radius: 15px;
     background-color: white;
     border: 2px solid #000;

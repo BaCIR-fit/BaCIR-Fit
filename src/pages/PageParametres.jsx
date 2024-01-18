@@ -6,19 +6,25 @@ import Footer from "../components/Footer.jsx"
 
 
 const PageParametres = () => {
-  return (
+  if(sessionStorage.getItem("user_data")){
+    return (
+      <div>
+      <HeaderParametres/>
+      <Parametres/>
+      <Footer />
+      </div>
+    );
+  } else {
+    return (
     <div>
     <HeaderParametres/>
-    <Parametres/>
+    {/* <Parametres/> */} 
+    <h1>Vous n'êtes pas connecté</h1>
     <Footer />
-    </div>
-    
-  );
-};
+    </div>)
 
-const handleDeconnexion = () => {
-  // Logique de déconnexion ici
-  console.log('Déconnexion effectuée');
+  }
+  
 };
 
 export default PageParametres;
