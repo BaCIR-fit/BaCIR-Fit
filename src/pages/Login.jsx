@@ -43,7 +43,9 @@ function Signin() {
         // console.log(data)
       } catch {
         console.log(data.message)
-      }})
+      }}).then(()=> {
+        window.location.pathname = "/profil"
+      })
 
   };
 
