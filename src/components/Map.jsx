@@ -35,12 +35,10 @@ L.Marker.prototype.options.icon = DefaultIcon;
 //Données qu'il faudra charger sur la page API ALED
 
 
-
-
 // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
 //onClose();  // Fermer le modal après la sauvegarde
 function handlePage(){
-   fetch('http://38.242.250.170:3000/admin/clubs/getAllClubs/2',{
+   fetch('https://apibacir.fly.dev/admin/clubs/getAllClubs/2',{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -56,8 +54,6 @@ function handlePage(){
     }
   })
 }
-
-
 
 // const positionsMarkers = [
 //     { title: "BaCIR Fit Lille", coordinates: [50.633333, 3.066667], adress: "132 rue du Nationale", horaires: "8h-22h", capaActu: 34, capaMax : 250},
