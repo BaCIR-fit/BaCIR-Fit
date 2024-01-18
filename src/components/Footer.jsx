@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { useState,useEffect } from 'react';
 
 import Maison from "../icons/house-chimney.svg"
 import Calendrier from "../icons/calendar-days.svg"
@@ -13,6 +14,27 @@ import "./Footer.css"
 
 
 const Footer = () => {
+
+    const [userId, setUserId] = useState(0);
+
+    useEffect(() => {
+        localStorage.setItem('user_id', JSON.stringify(userId));
+    }, [userId]);
+    
+    const handleRedirect = () => {
+        window.location.pathname = "/login"
+    }
+
+    function redirection(direction, img) {
+        if(sessionStorage.getItem("user_data")){
+            return({direction})
+        }
+        else {
+            return("/login")
+        }
+    }
+
+
     return (
         <footer>
             <button className="button_menu">
@@ -28,11 +50,11 @@ const Footer = () => {
             </button>
 
             <button className="button_menu">
-                <Link to="/profil"> <img src={Musculation} alt="Logo" className="icon_menu"/> </Link>
+                <Link to={redirection("/profil")}> <img src={Musculation} alt="Logo" className="icon_menu"/> </Link>
             </button>
             
             <button className="button_menu">
-                <Link to="/qrcode"> <img src={Qr} alt="Logo" className="icon_menu"/> </Link>
+                <Link to={redirection("/qrcode")}> <img src={Qr} alt="Logo" className="icon_menu"/> </Link>
             </button>
         </footer>
     )
