@@ -1,8 +1,5 @@
 import React from 'react'
 import Header from "../components/Header.jsx"
-import InputsInscription from '../components/InputsInscription.jsx';
-import InputSexeInscription from '../components/InputSexeInscription.jsx';
-import BoutonValidation from '../components/BoutonValidation.jsx';
 import Footer from "../components/Footer.jsx"
 import Titreh1 from '../components/Titreh1.jsx';
 import DivFooter from '../components/DivFooter.jsx';
@@ -175,6 +172,7 @@ const [selectedGender, setSelectedGender] = useState('');
           <BoutonValidation value="S'inscrire" couleur="couleurTrue"/>
           <DivFooter/>
           </form> */}
+          <DivFooter/>
         </body>
         
         <Footer />
