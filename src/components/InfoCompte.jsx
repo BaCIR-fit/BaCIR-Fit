@@ -4,7 +4,7 @@ import "./InfoCompte.css";
 
 const InfoCompte = (props) => {
     return (
-        <div className="SalleData">
+        <div className="SalleData" id="CompteData">
 
             <div id="IconZone">
                 <img src={logoCercle} id="Accountlogo" alt="logo" />

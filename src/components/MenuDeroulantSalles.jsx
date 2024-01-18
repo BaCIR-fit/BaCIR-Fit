@@ -34,7 +34,7 @@ const MenuDeroulantSalles = (props) => {
   };
 
   return (
-    <FormControl fullWidth>
+    <FormControl fullWidth style={{width : "80%", margin : "10px"}}>
       <InputLabel id="salle-select-label">Choisissez une salle</InputLabel>
       <Select
         labelId="salle-select-label"
