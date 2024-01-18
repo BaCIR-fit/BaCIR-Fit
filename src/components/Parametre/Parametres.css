@@ -1,24 +1,42 @@
-/* Parametres.css */
 ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  #deco {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px; /* Augmenté la taille du texte */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #555;
+}
+
+#deco {
+  margin-top: 20px;
+  padding: 15px; /* Augmenté la taille du bouton */
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Augmenté la taille du texte */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#deco:hover {
+  background-color: #c0392b;
+}
+
+/* Ajout d'une barre verticale entre chaque bouton */
+ul li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}

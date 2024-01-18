@@ -9,6 +9,7 @@ import Qrcode from "./pages/Qrcode.jsx";
 import Signin from './pages/Signin.jsx';
 import Login from './pages/Login.jsx';
 import Paiement from './pages/Paiement.jsx';
+import Parametres from './pages/PageParametres.jsx';
 
 //import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -28,7 +29,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/login" element={<Login />} />
           <Route path="/paiement" element={<Paiement />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/pageparametres" element={<Parametres />} />
         </Routes>
       </Router>
     </div>

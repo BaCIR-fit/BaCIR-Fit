@@ -2,16 +2,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HeaderParametres.css';
+import Croix from './croix.png'
+import logo from './CIR_fit.svg'
+
 
 const HeaderParametres = () => {
   return (
-    <div className="header-parametres">
-      <h2>Paramètres</h2>
-      <button id="croix">
-        <Link to="/accueil">X</Link>
-      </button>
-    </div>
+    <header>
+      <img src={logo} className="header-logo" alt="logo" />
+        <button id="croix">
+          <Link to="/"><img src={Croix} alt="Logo" className="croix"/></Link>
+        </button>
+    </header>
   );
 };
-
+/*<button id="croix">
+        <Link to="/"><img src={Croix} alt="Logo" className="croix"/></Link>
+      </button>*/
 export default HeaderParametres;
