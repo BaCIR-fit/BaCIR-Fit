@@ -7,9 +7,7 @@ import Titreh1 from '../components/Titreh1.jsx';
 import DivFooter from "../components/DivFooter.jsx"
 import { useState } from 'react';
 import { TextField,Button } from '@mui/material';
-import { redirect } from 'react-router-dom';
 import "./Login.css"
-import { width } from '@mui/system';
 // import mod
 
 function Signin() {
