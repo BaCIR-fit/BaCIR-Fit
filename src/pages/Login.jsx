@@ -7,7 +7,8 @@ import Titreh1 from '../components/Titreh1.jsx';
 import DivFooter from "../components/DivFooter.jsx"
 import { useState } from 'react';
 import { TextField,Button } from '@mui/material';
-
+import { redirect } from 'react-router-dom';
+// import mod
 
 function Signin() {
 
@@ -17,6 +18,11 @@ function Signin() {
   });
   const [updatedSettings, setUpdatedSettings] = useState(settings);
 
+  const handleRegister = () => {
+    // redirect("/signin");
+    window.location.pathname = "/signin"
+    return;
+  }
   const handleSubmit = () => {
     // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
     //onClose();  // Fermer le modal après la sauvegarde
@@ -71,6 +77,10 @@ function Signin() {
         </Button>
           <DivFooter/>
         </body>
+
+        <Button variant="contained" onClick={handleRegister} className="modalButton">
+          Créer un compte
+        </Button>
         
         <Footer />
       </div>
