@@ -6,6 +6,7 @@ import BoutonValidation from '../components/BoutonValidation.jsx';
 import Footer from "../components/Footer.jsx"
 import Titreh1 from '../components/Titreh1.jsx';
 import DivFooter from '../components/DivFooter.jsx';
+// import { Form } from 'react-router-dom';
 
 function Signin() {
     return (
@@ -13,6 +14,7 @@ function Signin() {
         <Header />
         <body>
           <Titreh1 texte="Créer un compte"/>
+          <form onSubmit={console.log("bruh")}>
           <InputsInscription placeholder="Nom" type="text"/>
           <InputsInscription placeholder="Prenom" type="text"/>
           <InputsInscription placeholder="Pseudo" type="text"/>
@@ -26,6 +28,7 @@ function Signin() {
           <br></br>
           <BoutonValidation value="S'inscrire" couleur="couleurTrue"/>
           <DivFooter/>
+          </form>
         </body>
         
         <Footer />
