@@ -10,6 +10,7 @@ const mapContainerStyle = {
     width: '80%',
     height: '300px',
     margin: 'auto auto',
+    zIndex: '0',
 };
 
 const [infoSalleVisible, setInfoSalleVisible] = useState(false); //Afficher ou non la case des infos sur la salle
@@ -31,9 +32,9 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 //Données qu'il faudra charger sur la page API ALED
 const positionsMarkers = [
-    { title: "BaCIR Fit Lille", coordinates: [50.633333, 3.066667], adress: "52 rue du Zouloulou", horaires: "8h-22h", state:"Fermé", freq:"Faible"},
+    { title: "BaCIR Fit Lille", coordinates: [50.633333, 3.066667], adress: "132 rue du Nationale", horaires: "8h-22h", state:"Fermé", freq:"Faible"},
     { title: "BaCIR Fit Panam", coordinates: [48.8566, 2.3522], adress: "52 rue du Zouloulou", horaires: "8h-22h", state:"Ouvert" ,freq:"Modérée"},
-    { title: "BaCIR Fit Madrid", coordinates: [40.4168, -3.7038], adress: "52 rue du Zouloulou", horaires: "8h-22h", state:"Ouvert", freq:"Elevée",},
+    { title: "BaCIR Fit Madrid", coordinates: [40.4168, -3.7038], adress: "52 rue du Zoulouloulouloulou", horaires: "8h-22h", state:"Ouvert", freq:"Elevée",},
 ];
 
 return (

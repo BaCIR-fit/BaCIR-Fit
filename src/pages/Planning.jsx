@@ -8,7 +8,7 @@ import DivFooter from '../components/DivFooter.jsx';
 
 function Planning() {
     return (
-      <div className="Planning">
+      <div className="Planning" style={{ height : "89vh", overflow : "auto"}}>
         <Header />
         <body>
           <Calendrier />

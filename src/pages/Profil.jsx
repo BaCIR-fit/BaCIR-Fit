@@ -15,13 +15,17 @@ const userData = {
 
 function Profil() {
   return (
-    <div className="Profil">
+    <div className="Profil" style={{ height : "89vh", overflow : "auto"}}>
       <Header />
+
       <InfoCompte user={userData} />
+
       <BulleGPT />
+
       <div id="ChartDiv">
         <ApexChart />
       </div>
+      
       <Footer />
     </div>
   );

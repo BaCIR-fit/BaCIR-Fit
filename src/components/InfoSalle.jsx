@@ -1,7 +1,7 @@
 import React from 'react';
 
 import logo from '../CIR_fit.svg';
-import "./InfoSalle.css";
+import "./InfoSalle.css"; 
 
 
 const InfoSalle = (props) => {
@@ -26,9 +26,11 @@ const InfoSalle = (props) => {
     
     return (
         <div className="SalleData">
-            <div>
+            
+            <div id='ZoneImgSalle'>
                 <img src={logo} className="header-logo" alt="logo" />
             </div>
+
             <div id='ZoneTxtSalle'>
                 <div>
                 <span className='BoldViolet'>{props.title}</span>
