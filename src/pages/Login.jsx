@@ -31,6 +31,8 @@ function Signin() {
     .then(data => {
       try{ 
         localStorage.setItem("SessionID",data.data.token)
+        localStorage.setItem("qr_code",data.data.qr_code)
+        // console.log(data)
       } catch {
         console.log(data.message)
       }})
@@ -50,10 +52,6 @@ function Signin() {
         <Header/>
         <body>
           <Titreh1 texte="Connexion"/>
-          {/* <InputsInscription placeholder="Email" type="email"/>
-          <InputsInscription placeholder="Mot de passe" type="password"/>
-          <br></br>
-          <BoutonValidation value="S'inscrire" couleur="couleurTrue"/> */}
            {Object.entries(updatedSettings).map(([paramName, paramValue]) => (
           <TextField
             key={paramName}
