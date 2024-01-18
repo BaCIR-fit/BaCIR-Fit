@@ -33,6 +33,7 @@
     position:relative;
     size : 100%;
     align-items: right;
+    justify-content: center;
 }
 
 

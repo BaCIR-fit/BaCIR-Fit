@@ -15,7 +15,16 @@ function Calendrier() {
 
     const handleEventClick = (info) => {
         setSelectedEvent(info.event); // accet aux informations de l'événement cliqué via `info.event`
+        setIsDejaInscrit(info.event.extendedProps.isDejaInscrit || false);
+        console.log(info.event.extendedProps.isDejaInscrit)
     };
+
+    // Inscrit ou désincrit l'utilisateur
+    const toggleInscription = () => {
+        setIsDejaInscrit((isDejaInscrit) => !isDejaInscrit);
+        console.log("Inversé")
+    };
+    
     return (
         <Container className="container">
             <FullCalendar
@@ -55,9 +64,8 @@ function Calendrier() {
                 } }
                 // Liste des événements à afficher sur le calendrier
                 events = { [
-                    {/* extendedProps.isDejaInscrit = false */},
-                    { title: 'Event 1', start: '2024-01-20T10:00:00', end: '2024-01-20T12:00:00' },
-                    { title: 'Event 2', start: '2024-01-20T14:00:00', end: '2024-01-20T16:00:00' },
+                    { title: 'Event 1', start: '2024-01-20T10:00:00', end: '2024-01-20T12:00:00', extendedProps: { isDejaInscrit: false } },
+                    { title: 'Event 2', start: '2024-01-20T14:00:00', end: '2024-01-20T16:00:00', extendedProps: { isDejaInscrit: false } },
                 ] }
                 slotMinTime = "07:00:00" // Heure de début des plages horaires
                 slotMaxTime = "23:00:00" // Heure de fin des plages horaires
@@ -78,12 +86,11 @@ function Calendrier() {
                         {" "}
                         Fin: {selectedEvent.end ? selectedEvent.end.toLocaleString() : ""}{" "}
                     </p>
-                    {/*
-                        events.extentedProps.isDejaInscrit === false ? (
-                            <button onClick = { () => events.extentedProps.isDejaInscrit = true }> S'inscrire </button>
-                        ) :
-                            <button onClick = { () => setIsDejaInscrit(false) }> Se désinscrire </button>
-                    */}
+                    {
+                        <button onClick = { toggleInscription }>
+                            { isDejaInscrit ? "Se désinscrire" : "S'inscrire" }
+                        </button>
+                    }
                 </div>
             ) }
 
