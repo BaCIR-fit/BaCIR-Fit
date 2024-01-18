@@ -7,7 +7,7 @@ import Titreh1 from '../components/Titreh1.jsx';
 import DivFooter from "../components/DivFooter.jsx"
 import { useState } from 'react';
 import { TextField,Button } from '@mui/material';
-import "./Login.css"
+
 // import mod
 import Cookies from 'universal-cookie';
 
