@@ -11,13 +11,17 @@
     display : grid;
     grid-template-columns: 20% 80%;
     position: relative;
-    max-height: 20vh;
+    max-height: 30vh;
 
     margin: 15px;
     padding: 10px;
     border-radius: 10px;
     border: solid 2px rgb(99, 93, 158);
     z-index:1;
+}
+
+.DeleteMax{
+    max-height: none !important;
 }
 
 /* .SalleData > div {
@@ -34,6 +38,10 @@
     size : 100%;
     align-items: right;
     justify-content: center;
+}
+
+.ZoneTxtSalleA{
+    height: auto !important;
 }
 
 
