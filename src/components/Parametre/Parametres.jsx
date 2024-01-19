@@ -29,7 +29,7 @@ const Parametres = () => {
   return (
     <div>
     <ul>
-        <li><a>Résilier</a></li>
+      <li><a>{Resiliation()}</a></li>
         <li><Link to="/historique"> Mes visites </Link></li>
     </ul>
     <button id="deco" onClick={handleDeconnexion}>Déconnexion</button>
@@ -47,7 +47,7 @@ function Resiliation() {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     }}).then(() => {
-      // window.location.pathname = "/"
+      window.location.pathname = "/"
     })
   };
   
@@ -73,6 +73,49 @@ function Resiliation() {
                   Êtes vous vraiment sûr de vouloir résilier votre abonnement ?
               </Typography>
               <Button onClick={handleResiliation} >
+                { "CONFIRMER" }
+              </Button>
+              </Box>
+          </Modal>
+      </div>
+  );
+}
+
+function abonnement() {
+
+  const handleAbonnement = () => {
+  console.log('abonnement effectuée');
+  fetch('http://localhost:3000/user/isActive',{
+    method:'GET',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    }}).then(() => {
+      window.location.pathname = "/"
+    })
+  };
+  
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+
+  return (
+      <div>
+          <a href="#resiliation" onClick={handleOpen} className="custom-link"> Acheter mon abonnement </a>
+          <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+          >
+              <Box className="box">
+              <Typography color="red" variant="h6" component="h2">
+                  Acheter
+              </Typography>
+              <Typography>
+                  Êtes vous vraiment sûr de vouloir acheter votre abonnement ?
+              </Typography>
+              <Button onClick={handleAbonnement} >
                 { "CONFIRMER" }
               </Button>
               </Box>
