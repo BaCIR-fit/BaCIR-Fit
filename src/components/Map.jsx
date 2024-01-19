@@ -37,7 +37,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
 //onClose();  // Fermer le modal après la sauvegarde
 function handlePage(){
-   fetch('http://localhost:3000/admin/clubs/getAllClubs/2',{
+   fetch('http://localhost:3000/admin/clubs/getAllClubs/5',{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
