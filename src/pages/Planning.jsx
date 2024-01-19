@@ -72,11 +72,9 @@ function Planning() {
   if (allActivities) {
     allActivities.map((activity) => {
       let start = activity.activity_date
-// add 1 hours to start
       let end = new Date(start);
       end.setHours(end.getHours() + 1);
       end = end.toISOString();
-      console.log(start, end);
       initialData.push({
         title: activity.activity_name,
         start,
