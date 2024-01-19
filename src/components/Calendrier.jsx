@@ -20,15 +20,17 @@ function Calendrier(props){
 
     const inscription = () =>{
         fetch('http://localhost:3000/users/user/addUserActivity',{
-            method:'GET',
+            method:'POST',
             headers: {
               'Content-type': 'application/json; charset=UTF-8',
-            }})
+            },
+            body: JSON.stringify(selectedEvent),
+        })
             .then(response => response.json())
             .then(data => {
               try{ 
-                let clubsInfos = data.data;
-                localStorage.setItem("club",JSON.stringify(clubsInfos))
+                let isInscrit = data.data;
+                localStorage.setItem("inscrit",JSON.stringify(isInscrit))
               } catch (err) {
                 console.log(data.message)
               }
@@ -37,15 +39,17 @@ function Calendrier(props){
 
     const desinscription = () => {
         fetch('http://localhost:3000/users/user/deleteUserActivity',{
-            method:'GET',
+            method:'POST',
             headers: {
               'Content-type': 'application/json; charset=UTF-8',
-            }})
+            },
+            body: JSON.stringify(selectedEvent),
+        })
             .then(response => response.json())
             .then(data => {
               try{ 
-                let clubsInfos = data.data;
-                localStorage.setItem("club",JSON.stringify(clubsInfos))
+                let isDesinscrit = data.data;
+                localStorage.setItem("desinscrit",JSON.stringify(isDesinscrit))
               } catch (err) {
                 console.log(data.message)
               }
@@ -62,6 +66,7 @@ function Calendrier(props){
 
     // Inscrit ou désincrit l'utilisateur
     const toggleInscription = () => {
+        isDejaInscrit ? desinscription() : inscription();
         setIsDejaInscrit((isDejaInscrit) => !isDejaInscrit);
     };
 
