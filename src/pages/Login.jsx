@@ -28,7 +28,7 @@ function Signin() {
     // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
     //onClose();  // Fermer le modal après la sauvegarde
     console.log(updatedSettings)
-    // fetch('https://apibacir.fly.dev/auth/login',{
+    // fetch('http://localhost:3000/auth/login',{
     fetch('http://localhost:3000/auth/login',{
       method:'POST',
       body:JSON.stringify(updatedSettings),

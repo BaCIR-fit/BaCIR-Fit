@@ -37,7 +37,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
 //onClose();  // Fermer le modal après la sauvegarde
 function handlePage(){
-   fetch('https://apibacir.fly.dev/admin/clubs/getAllClubs/2',{
+   fetch('http://localhost:3000/admin/clubs/getAllClubs/2',{
     method:'GET',
     headers: {
     // '':'',

@@ -59,7 +59,7 @@ const [selectedGender, setSelectedGender] = useState('');
     // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
     //onClose();  // Fermer le modal après la sauvegarde
     console.log(JSONfinal)
-    fetch('https://apibacir.fly.dev/auth/register',{
+    fetch('http://localhost:3000/auth/register',{
       method:'POST',
       body:JSON.stringify(JSONfinal),
       

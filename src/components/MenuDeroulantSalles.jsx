@@ -9,8 +9,10 @@ const MenuDeroulantSalles = (props) => {
   const [selectedClub, setSelectedClub] = useState('');
 
   useEffect(() => {
+    console.log(props)
     if (props.data && props.data.length > 0) {
-      const uniqueClubs = Array.from(new Set(props.data.map(club => club.club_name)));
+      let data = JSON.parse(props.data)
+      const uniqueClubs = Array.from(new Set(data.map(club => club.club_name)));
       setClubOptions(uniqueClubs);
 
       // Mettre le premier élément en valeur par défaut
