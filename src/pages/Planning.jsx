@@ -44,14 +44,14 @@ handleClub();
 let allClubs = [];
 allClubs = JSON.parse(localStorage.getItem("club"));
 
-// handleActivities();
-// let allActivities = [];
-// allActivities = JSON.parse(localStorage.getItem("activity"));
-const allActivities = [
-  { activity_name: 'Zumba café', start_time: '2024-01-18T10:00:00', end_time: '2024-01-18T12:00:00', room_id: 'Salle de musculation', club_name: 'BaCIR fit Lille Natio', club_id:'65a900b351f957aebe23a237' },
-  { activity_name: 'Aquaponey', start_time: '2024-01-20T14:00:00', end_time: '2024-01-20T16:00:00', room_id: 'Salle de musculation', club_name: 'BaCIR fit Lille Natio', club_id:'65a900b351f957aebe23a237' },
-  { activity_name: 'Crossfit', start_time: '2024-01-20T14:00:00', end_time: '2024-01-20T16:00:00', room_id: 'Salle de Yoga', club_name: 'BaCIR fit Lille Esquermes', club_id:'65a9011b51f957aebe23a23c' },
-];
+handleActivities();
+let allActivities = [];
+allActivities = JSON.parse(localStorage.getItem("activity"));
+// const allActivities = [
+//   { activity_name: 'Zumba café', start_time: '2024-01-18T10:00:00', end_time: '2024-01-18T12:00:00', room_id: 'Salle de musculation', club_name: 'BaCIR fit Lille Natio', club_id:'65a900b351f957aebe23a237' },
+//   { activity_name: 'Aquaponey', start_time: '2024-01-20T14:00:00', end_time: '2024-01-20T16:00:00', room_id: 'Salle de musculation', club_name: 'BaCIR fit Lille Natio', club_id:'65a900b351f957aebe23a237' },
+//   { activity_name: 'Crossfit', start_time: '2024-01-20T14:00:00', end_time: '2024-01-20T16:00:00', room_id: 'Salle de Yoga', club_name: 'BaCIR fit Lille Esquermes', club_id:'65a9011b51f957aebe23a23c' },
+// ];
 
 
 function Planning() {
