@@ -29,9 +29,9 @@ function Signin() {
     //onClose();  // Fermer le modal après la sauvegarde
     console.log(updatedSettings)
     // let setts = {email:updatedSettings.Email,password:updatedSettings.MotDePasse}
-    // fetch('http://localhost:3000/auth/login',{
+    // fetch('https://apibacir.fly.dev/auth/login',{
 
-    fetch('http://localhost:3000/auth/login',{
+    fetch('https://apibacir.fly.dev/auth/login',{
       method:'POST',
       body:JSON.stringify(updatedSettings),
       headers: {

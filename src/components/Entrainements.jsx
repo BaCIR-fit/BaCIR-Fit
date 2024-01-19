@@ -5,7 +5,7 @@ import './Entrainements.css';
 
 
 function getRoom(room_id){
-  fetch('http://localhost:3000/admin/rooms/getRoom/' + room_id,{
+  fetch('https://apibacir.fly.dev/admin/rooms/getRoom/' + room_id,{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -22,7 +22,7 @@ function getRoom(room_id){
 }
 
 function getClub(club_id){  
-  fetch('http://localhost:3000/admin/clubs/getClubById/' + club_id,{
+  fetch('https://apibacir.fly.dev/admin/clubs/getClubById/' + club_id,{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -39,7 +39,7 @@ function getClub(club_id){
 }
 
 function getActivity(activity_id){  
-  fetch('http://localhost:3000/admin/clubs/getClubById/' + activity_id,{
+  fetch('https://apibacir.fly.dev/admin/clubs/getClubById/' + activity_id,{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -69,8 +69,8 @@ const Entrainements = () => {
   
 const handlePage = () => {
   document.cookie = "SessionID="+sessionStorage.getItem("SessionID")+";"
-  // fetch('http://localhost:3000/user/getLogs',{
-    fetch('http://localhost:3000/user/getLogs/'+JSON.parse(sessionStorage.getItem("user_data"))._id,{
+  // fetch('https://apibacir.fly.dev/user/getLogs',{
+    fetch('https://apibacir.fly.dev/user/getLogs/'+JSON.parse(sessionStorage.getItem("user_data"))._id,{
    method:'GET',
    credentials:"include",
    headers: {
