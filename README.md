@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# BACIR-Fit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Ce projet a été initié avec [Create React App](https://github.com/facebook/create-react-app).*
 
-## Available Scripts
+## Utilisation client
 
-In the project directory, you can run:
+Dans le répertoire du projet, vous pouvez exécuter `npm start` pour exécuter l'application en mode développement.\
+Ouvrez [http://localhost:3000](http://localhost:3000) pour l'afficher dans votre navigateur.
 
-### `npm start`
+La page se rechargera lorsque vous ferez des changements.\
+Vous pouvez également voir s'il y'a des erreurs dans la console.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Pages disponibles :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Accueil
 
-### `npm test`
+Affichage d'informations sur la salle de sport tel que des activités ou les tarifs pratiqués.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Planning
 
-### `npm run build`
+Permet d'accéder aux activités sportives prévues dans les prochains jours via un affichage simple et clair, le choix de la salle se fait par un menu déroulant en haut de page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Carte
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Permet de visualiser sur une carte les emplacements des différentes salles. Sélectionner une salle permet d'obtenir plus d'informations sur celles-ci comme son adresse exacte, ses horaires d’-'ouverture et son affluence actuelle.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Profil
 
-### `npm run eject`
+Affiche des statistiques à l'utilisateurs sur ses activités à la salle de sport.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### QR-Code
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Affiche le QR-code permettant à l'utilisateur d'accès aux différentes salles.
