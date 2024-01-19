@@ -148,7 +148,7 @@ const [selectedGender, setSelectedGender] = useState('');
             value={paramValue}
             onChange={handlePasswordChange}
             className="modalInput"
-            type={paramName=="password"?"password":"input"}
+            type={paramName=="MotDePasse"?"password":"input"}
             style={{ margin: '8px 0', width: '70%' }}
           />
         ))}
