@@ -9,7 +9,6 @@ const MenuDeroulantSalles = (props) => {
   const [selectedClub, setSelectedClub] = useState('');
 
   useEffect(() => {
-    console.log(props)
     if (props.data && props.data.length > 0) {
       let data = JSON.parse(props.data)
       const uniqueClubs = Array.from(new Set(data.map(club => club.club_name)));

@@ -25,9 +25,7 @@ function handleClub(){
     })
 }
 
-handleClub();
-let allClubs = [];
-allClubs = JSON.parse(localStorage.getItem("club"));
+
 
 // const allActivities = [
 //   { activity_name: 'Zumba café', start_time: '2024-01-18T10:00:00', end_time: '2024-01-18T12:00:00', room_id: 'Salle de musculation', club_name: 'BaCIR fit Lille Natio', club_id:'65a900b351f957aebe23a237' },
@@ -38,6 +36,15 @@ allClubs = JSON.parse(localStorage.getItem("club"));
 
 function Planning() {
 
+  const initialData = [];
+
+  const [selectedClub, setSelectedClub] = useState(0);
+  const [filteredData, setFilteredData] = useState(initialData);
+  handleClub();
+
+let allClubs = [];
+allClubs = JSON.parse(localStorage.getItem("club"));
+console.log(allClubs)
   function handleActivities(id_club){
   fetch(`http://localhost:3000/user/getActivity/${id_club}`,{
     method:'GET',
@@ -49,35 +56,32 @@ function Planning() {
       console.log(data)
       try{ 
         let activityInfos = data.data;
+        console.log(activityInfos)
         if(activityInfos){
           localStorage.setItem("activity", JSON.stringify(activityInfos))
         } else {
           localStorage.setItem("activity",JSON.stringify(initialData))
         }
+        console.log(localStorage.getItem("activity"))
       } catch (err) {
         console.log(data.message)
       }
     })
 }
-const initialData = [];
-
-const [selectedClub, setSelectedClub] = useState(0);
-const [filteredData, setFilteredData] = useState(initialData);
 
   useEffect(() => {
     filterDataByClub(selectedClub);
-
   }, [selectedClub]);
 
   handleActivities(selectedClub);
   let allActivities = [];
   allActivities = JSON.parse(localStorage.getItem("activity"))
+  console.log(allActivities,selectedClub)
   allActivities.map((activity) => {
-    console.log(activity)
     initialData.push({
       title: activity.activity_name,
-      start: activity.start_time,
-      end: activity.end_time,
+      // start: activity.start_time,
+      // end: activity.end_time,
       salle: activity.room_id,  
       club: activity.club_name,
       club_id:activity.club_id,
