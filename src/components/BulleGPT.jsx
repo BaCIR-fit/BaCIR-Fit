@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import ModalGPT from './ModalGPT'; // Remplacez par le chemin d'accès correct vers votre composant Modal
 
 const BulleGPT = () => {

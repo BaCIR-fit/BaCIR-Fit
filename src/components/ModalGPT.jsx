@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import Chat from './GPT/Chat';
-import "./ModalGPT.css"
+import "./ModalGPT.css";
 
-const ModalGPT = () => {
+const ModalGPT = ({ closeModal }) => {
     const [message, setMessage] = useState('');
     const [discussion, setDiscussion] = useState([]);
 
@@ -16,22 +16,17 @@ const ModalGPT = () => {
         setMessage('');
     };
 
-
     return (
-        <div>
-            {/* Modal */}
-            <div className="modal" >
-                {/* Header */}
-                <div className="header">
-                    <h2>BaCIR Bot</h2>
-                </div>
-
-                <Chat discussion={discussion} />
+        <div className="modal">
+            {/* Header */}
+            <div className="header">
+                <h2>BaCIR Bot</h2>
             </div>
+
+            <Chat discussion={discussion} />
+            <button className="closeButtonGPT" onClick={closeModal}>Fermer</button>
         </div>
     );
 };
 
 export default ModalGPT;
-
-
