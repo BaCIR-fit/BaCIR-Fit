@@ -1,25 +1,8 @@
 // Entrainements.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Entrainements.css';
+import axios from 'axios';
 
-
-function handlePage(){
-  fetch('https://apibacir.fly.dev/user/getLogs',{
-   method:'GET',
-   headers: {
-     'Content-type': 'application/json; charset=UTF-8',
-   }})
-   .then(response => response.json())
-   .then(data => {
-   try{ 
-       console.log("ici on envoie les logs");
-       let logsUser = data.data;
-       localStorage.setItem("entrainements",JSON.stringify(logsUser))
-   } catch (err) {
-       console.log(data.message)
-   }
- })
-}
 
 function getRoom(room_id){
   fetch('https://apibacir.fly.dev/admin/rooms/getRoom/' + room_id,{
@@ -72,10 +55,6 @@ function getActivity(activity_id){
   })
 }
 
-handlePage()
-let historiqueEntrainement = JSON.parse(localStorage.getItem("entrainements"))
-console.log(historiqueEntrainement)
-
 
 const Entrainements = () => {
   // const entrainements = [
@@ -83,6 +62,36 @@ const Entrainements = () => {
   //   { date: '2024-01-05', time: '15:30', salle: 'Salle B', type: 'Musculation', duration: 45 },
   // ];
 
+  
+const handlePage = () => {
+  console.log(document.cookie)
+  // fetch('https://apibacir.fly.dev/user/getLogs',{
+    fetch('http://localhost:3000/ user/getLogs',{
+   method:'GET',
+   credentials:"include",
+   headers: {
+    'accept':'application/json',
+      // 'Cookie':"SessionID"+sessionStorage.getItem('SessionID'),
+     'Content-type': 'application/json; charset=UTF-8',
+   },
+
+  })
+   .then(response => response.json())
+   .then(data => {
+   try{ 
+       console.log("ici on envoie les logs");
+       let logsUser = data.data;
+       localStorage.setItem("entrainements",JSON.stringify(logsUser))
+   } catch (err) {
+       console.log(data.message)
+   }
+ }).catch((err) => console.log(err))
+}
+  handlePage()
+
+  let historiqueEntrainement = JSON.parse(localStorage.getItem("entrainements"))
+  console.log(historiqueEntrainement)
+  
   return (
     <div>
       <h2>Historique des entrainements</h2>
