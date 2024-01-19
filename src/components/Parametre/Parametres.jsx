@@ -17,7 +17,7 @@ const Parametres = () => {
   let user = JSON.parse(sessionStorage.getItem("user_data"))
 
   React.useEffect(() => {
-    fetch(`http://localhost:3000/user/getProfile/` + user._id, {
+    fetch(`https://apibacir.fly.dev/user/getProfile/` + user._id, {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -36,7 +36,7 @@ const Parametres = () => {
   const handleDeconnexion = () => {
     // Logique de déconnexion ici
     console.log('Déconnexion effectuée');
-    fetch('http://localhost:3000/auth/logout',{
+    fetch('https://apibacir.fly.dev/auth/logout',{
       method:'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -65,7 +65,7 @@ function Resiliation() {
   let user = JSON.parse(sessionStorage.getItem("user_data"))
   const handleResiliation = () => {
   console.log('Résiliation effectuée');
-  fetch('http://localhost:3000/user/isNotActive/' + user._id,{
+  fetch('https://apibacir.fly.dev/user/isNotActive/' + user._id,{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -110,7 +110,7 @@ function Abonnement() {
 
   const handleAbonnement = () => {
   console.log('abonnement effectuée');
-  fetch('http://localhost:3000/user/isActive/' + user._id,{
+  fetch('https://apibacir.fly.dev/user/isActive/' + user._id,{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',

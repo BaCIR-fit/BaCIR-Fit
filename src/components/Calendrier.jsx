@@ -19,7 +19,7 @@ function Calendrier(props){
 
 
     const inscription = () =>{
-        fetch('http://localhost:3000/users/user/addUserActivity',{
+        fetch('https://apibacir.fly.dev/user/addUserActivity',{
             method:'POST',
             headers: {
               'Content-type': 'application/json; charset=UTF-8',
@@ -38,7 +38,7 @@ function Calendrier(props){
     }
 
     const desinscription = () => {
-        fetch('http://localhost:3000/users/user/deleteUserActivity',{
+        fetch('https://apibacir.fly.dev/user/deleteUserActivity',{
             method:'POST',
             headers: {
               'Content-type': 'application/json; charset=UTF-8',

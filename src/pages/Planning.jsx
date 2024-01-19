@@ -6,7 +6,7 @@ import Header from '../components/Header.jsx';
 import SelectPlanning from '../components/MenuDeroulantSalles.jsx'
 
 function handleActivities() {
-  fetch(`http://localhost:3000/user/getAllActivity`, {
+  fetch(`https://apibacir.fly.dev/user/getAllActivity`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -70,9 +70,11 @@ function Planning() {
   const initialData = [];
   console.log(allActivities);
   if (allActivities) {
-    allActivities.map((activity) => {
-      let start = activity.activity_date
+
+    allActivities.forEach((activity) => {
+      let start = new Date(activity[0].activity_date);
       let end = new Date(start);
+
       end.setHours(end.getHours() + 1);
       end = end.toISOString();
       initialData.push({
@@ -86,6 +88,8 @@ function Planning() {
     });
   }
 
+  console.log("PROUT",initialData);
+
   const [selectedClub, setSelectedClub] = useState('');
   const [filteredData, setFilteredData] = useState(initialData);
 
@@ -95,28 +99,29 @@ function Planning() {
     setSelectedClub(club);
   };
 
-  useEffect(() => {
-    filterDataByClub(selectedClub);
-  }, [selectedClub]);
+  // useEffect(() => {
+  //   filterDataByClub(selectedClub);
+  // }, [selectedClub]);
 
-  const filterDataByClub = (club) => {
-    if (club === '') {
-      setFilteredData(initialData);
-    } else {
-      const filtered = initialData.filter((event) => {
-        console.log(event.club, " ", club, event.club === club);
-        return event.club === club});
-      setFilteredData(filtered);
-      console.log(filtered);
-    }
-  };
+  // const filterDataByClub = (club) => {
+  //   if (club === '') {
+  //     setFilteredData(initialData);
+  //   } else {
+  //     const filtered = initialData.filter((event) => {
+  //       console.log(event.club, " ", club, event.club === club);
+  //       return event.club === club});
+  //     setFilteredData(filtered);
+  //     console.log(filtered);
+  //   }
+  // };
+
 
   return (
     <div className="Planning" style={{ height: '89vh', overflow: 'auto' }}>
       <Header />
       <div>
         <SelectPlanning data={allClubs} onClubChange={handleClubChange} />
-        <Calendrier data={filteredData} />
+        <Calendrier data={allActivities[0]} />
         <DivFooter />
       </div>
       <Footer />
