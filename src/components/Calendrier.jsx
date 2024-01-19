@@ -17,6 +17,41 @@ function Calendrier(props){
     const [isDejaInscrit, setIsDejaInscrit] = useState(false);
     const [modalOpen, setModalOpen] = useState(false);
 
+
+    const inscription = () =>{
+        fetch('http://localhost:3000/users/user/addUserActivity',{
+            method:'GET',
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            }})
+            .then(response => response.json())
+            .then(data => {
+              try{ 
+                let clubsInfos = data.data;
+                localStorage.setItem("club",JSON.stringify(clubsInfos))
+              } catch (err) {
+                console.log(data.message)
+              }
+            })
+    }
+
+    const desinscription = () => {
+        fetch('http://localhost:3000/users/user/deleteUserActivity',{
+            method:'GET',
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            }})
+            .then(response => response.json())
+            .then(data => {
+              try{ 
+                let clubsInfos = data.data;
+                localStorage.setItem("club",JSON.stringify(clubsInfos))
+              } catch (err) {
+                console.log(data.message)
+              }
+            })
+    }
+
     // Gere l'evenement
     const handleEventClick = (info) => {
         setSelectedEvent(info.event); // accet aux informations de l'événement cliqué via `info.event`

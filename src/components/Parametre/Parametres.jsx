@@ -14,7 +14,7 @@ const Parametres = () => {
   const handleDeconnexion = () => {
     // Logique de déconnexion ici
     console.log('Déconnexion effectuée');
-    fetch('https://apibacir.fly.dev/auth/logout',{
+    fetch('http://localhost:3000/auth/logout',{
       method:'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
