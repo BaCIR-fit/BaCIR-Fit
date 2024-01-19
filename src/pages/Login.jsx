@@ -80,7 +80,7 @@ function Signin() {
             value={paramValue}
             onChange={handleChange}
             className="modalInput"
-            type={paramName=="password"?"password":"input"}
+            type={paramName=="MotDePasse"?"password":"input"}
             size="small"
             style={{ margin: '8px 0', width: '70%' }}
           />
