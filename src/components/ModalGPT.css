@@ -44,3 +44,11 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.closeButtonGPT{
+    border-radius: 10px;
+    border: solid 2px rgb(99, 93, 158);
+    padding: 5px;
+    background-color: white;
+    font-weight: bold;
+}
