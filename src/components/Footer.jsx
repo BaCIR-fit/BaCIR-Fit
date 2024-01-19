@@ -15,24 +15,24 @@ import "./Footer.css"
 
 const Footer = () => {
 
-    const [userId, setUserId] = useState(0);
+    // const [userId, setUserId] = useState(0);
 
-    useEffect(() => {
-        localStorage.setItem('user_id', JSON.stringify(userId));
-    }, [userId]);
+    // useEffect(() => {
+    //     localStorage.setItem('user_id', JSON.stringify(userId));
+    // }, [userId]);
     
-    const handleRedirect = () => {
-        window.location.pathname = "/login"
-    }
+    // const handleRedirect = () => {
+    //     window.location.pathname = "/login"
+    // }
 
-    function redirection(direction, img) {
-        if(sessionStorage.getItem("user_data")){
-            return({direction})
-        }
-        else {
-            return("/login")
-        }
-    }
+    // function redirection(direction, img) {
+    //     if(sessionStorage.getItem("user_data")){
+    //         return({direction})
+    //     }
+    //     else {
+    //         return("/login")
+    //     }
+    // }
 
 
     return (
@@ -50,11 +50,13 @@ const Footer = () => {
             </button>
 
             <button className="button_menu">
-                <Link to={redirection("/profil")}> <img src={Musculation} alt="Logo" className="icon_menu"/> </Link>
+                {/* <Link to={redirection("/profil")}> <img src={Musculation} alt="Logo" className="icon_menu"/> </Link> */}
+                <Link to="/profil"> <img src={Musculation} alt="Logo" className="icon_menu"/> </Link>
             </button>
             
             <button className="button_menu">
-                <Link to={redirection("/qrcode")}> <img src={Qr} alt="Logo" className="icon_menu"/> </Link>
+                {/* <Link to={redirection("/qrcode")}> <img src={Qr} alt="Logo" className="icon_menu"/> </Link> */}
+                <Link to="/qrcode"> <img src={Qr} alt="Logo" className="icon_menu"/> </Link>
             </button>
         </footer>
     )

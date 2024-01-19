@@ -14,8 +14,8 @@ import Cookies from 'universal-cookie';
 function Signin() {
 
   const [settings] = useState({
-    email: "",
-    password:""
+    Email: "", //email
+    MotDePasse: "" //password
   });
   const [updatedSettings, setUpdatedSettings] = useState(settings);
 
