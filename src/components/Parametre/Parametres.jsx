@@ -55,10 +55,10 @@ function Resiliation() {
           >
               <Box className="box">
               <Typography color="red" variant="h6" component="h2">
-                  RESILIATION
+                  Résiliation
               </Typography>
               <Typography>
-                  Etes vous vraiment sur de vouloir résilier votre abonnement ?
+                  Êtes vous vraiment sûr de vouloir résilier votre abonnement ?
               </Typography>
               <Button /*onClick = {  DESABONNER ICI } */ >
                 { "CONFIRMER" }

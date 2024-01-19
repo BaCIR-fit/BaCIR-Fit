@@ -45,6 +45,7 @@ function Planning() {
     }})
     .then(response => response.json())
     .then(data => {
+      console.log(data)
       try{ 
         let activityInfos = data.data;
         if(activityInfos){
