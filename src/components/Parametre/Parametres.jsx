@@ -14,15 +14,19 @@ const Parametres = () => {
   const [isSubscribed, setIsSubscribed] = React.useState(false);
 
   // Fetch user subscription status when the component mounts
+  let user = JSON.parse(sessionStorage.getItem("user_data"))
+
   React.useEffect(() => {
-    fetch('http://localhost:3000/user/getProfile', {
+    fetch(`http://localhost:3000/user/getProfile/` + user._id, {
       method: 'GET',
+      credentials: 'include',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
     }).then(response => response.json())
       .then(data => {
-        setIsSubscribed(data.isActive);
+        setIsSubscribed(data.data.isActive);
+        console.log(data.data.isActive)
       })
       .catch(error => {
         console.error('Error fetching subscription status:', error);
@@ -58,9 +62,10 @@ const Parametres = () => {
 
 function Resiliation() {
 
+  let user = JSON.parse(sessionStorage.getItem("user_data"))
   const handleResiliation = () => {
   console.log('Résiliation effectuée');
-  fetch('http://localhost:3000/user/isNotActive',{
+  fetch('http://localhost:3000/user/isNotActive/' + user._id,{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -101,13 +106,16 @@ function Resiliation() {
 
 function Abonnement() {
 
+  let user = JSON.parse(sessionStorage.getItem("user_data"))
+
   const handleAbonnement = () => {
   console.log('abonnement effectuée');
-  fetch('http://localhost:3000/user/isActive',{
+  fetch('http://localhost:3000/user/isActive/' + user._id,{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
-    }}).then(() => {
+    }}).then((data) => {
+      console.log(data)
       window.location.pathname = "/"
     })
   };
