@@ -110,7 +110,7 @@ const handlePage = () => {
           <li key={index}>
             <div className="row">
               <div className="column">
-                <p>entrainement.date</p>
+                <p>{entrainement.date}</p>
                 <p>{entrainement.workout_time}</p>
                 <p>{entrainement.room_name}</p>
               </div>
