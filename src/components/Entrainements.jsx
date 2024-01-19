@@ -4,6 +4,24 @@ import './Entrainements.css';
 import axios from 'axios';
 
 
+// function handlePage(){
+//   fetch('https://apibacir.fly.dev/user/getLogs',{
+//    method:'GET',
+//    headers: {
+//      'Content-type': 'application/json; charset=UTF-8',
+//    }})
+//    .then(response => response.json())
+//    .then(data => {
+//    try{ 
+//        console.log("ici on envoie les logs");
+//        let logsUser = data.data;
+//        localStorage.setItem("entrainements",JSON.stringify(logsUser))
+//    } catch (err) {
+//        console.log(data.message)
+//    }
+//  })
+// }
+
 function getRoom(room_id){
   fetch('https://apibacir.fly.dev/admin/rooms/getRoom/' + room_id,{
     method:'GET',
@@ -54,6 +72,10 @@ function getActivity(activity_id){
     }
   })
 }
+
+// handlePage()
+let historiqueEntrainement = JSON.parse(localStorage.getItem("entrainements"))
+// console.log(historiqueEntrainement)
 
 
 const Entrainements = () => {
