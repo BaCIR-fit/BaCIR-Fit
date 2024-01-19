@@ -17,6 +17,7 @@ function handleClub(){
     .then(data => {
       try{ 
         let clubsInfos = data.data;
+        // console.log(clubsInfos)
         localStorage.setItem("club",JSON.stringify(clubsInfos))
       } catch (err) {
         console.log(data.message)
@@ -77,7 +78,8 @@ const [filteredData, setFilteredData] = useState(initialData);
       start: activity.start_time,
       end: activity.end_time,
       salle: activity.room_id,  
-      club: activity.club_name,   
+      club: activity.club_name,
+      club_id:activity.club_id,
       extendedProps: { isDejaInscrit: false },
     });
   });
