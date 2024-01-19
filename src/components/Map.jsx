@@ -40,7 +40,6 @@ function handlePage(){
    fetch('http://localhost:3000/admin/clubs/getAllClubs/2',{
     method:'GET',
     headers: {
-    // '':'',
       'Content-type': 'application/json; charset=UTF-8',
     }})
     .then(response => response.json())
@@ -48,7 +47,7 @@ function handlePage(){
     try{ 
         console.log("ici on envoie les infos");
         let clubsInfos = data.data;
-        localStorage.setItem("test",JSON.stringify(clubsInfos))
+        localStorage.setItem("test",clubsInfos)
     } catch (err) {
         console.log(data.message)
     }
@@ -62,8 +61,8 @@ function handlePage(){
 // ];
  
 handlePage()
-let positionsMarkers = [];
-positionsMarkers = JSON.parse(localStorage.getItem("test"))
+// let positionsMarkers = [];
+let positionsMarkers = JSON.parse(localStorage.getItem("test"))
 
 return (
     <>
