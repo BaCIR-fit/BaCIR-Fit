@@ -23,7 +23,7 @@ const MenuDeroulantSalles = (props) => {
         }
       }
     }
-  }, [props.data, selectedClub, props.onClubChange]);
+  }, [JSON.parse(props.data), selectedClub, props.onClubChange]);
 
   const handleChange = (event) => {
     const selectedClub = event.target.value;

@@ -66,11 +66,12 @@ const [filteredData, setFilteredData] = useState(initialData);
 
   useEffect(() => {
     filterDataByClub(selectedClub);
+
   }, [selectedClub]);
 
   handleActivities(selectedClub);
   let allActivities = [];
-  allActivities = JSON.parse(localStorage.getItem("activity"));
+  allActivities = JSON.parse(localStorage.getItem("activity"))
   allActivities.map((activity) => {
     console.log(activity)
     initialData.push({

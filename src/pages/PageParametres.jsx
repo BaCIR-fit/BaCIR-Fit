@@ -3,7 +3,7 @@ import React from 'react';
 import HeaderParametres from '../components/Parametre/HeaderParametres.jsx'
 import Parametres from '../components/Parametre/Parametres.jsx'
 import Footer from "../components/Footer.jsx"
-import { Button } from '@mui/base';
+import { Button } from '@mui/material';
 
 const PageParametres = () => {
 

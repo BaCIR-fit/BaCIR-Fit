@@ -39,6 +39,15 @@ const Parametres = () => {
 };
 
 function Resiliation() {
+  console.log('Résiliation effectuée');
+  fetch('http://localhost:3000/users/user/isNotActivet',{
+    method:'GET',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    }}).then(() => {
+      window.location.pathname = "/"
+    })
+  
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
