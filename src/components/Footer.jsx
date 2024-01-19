@@ -27,7 +27,7 @@ const Footer = () => {
 
     function redirection(direction, img) {
         if(sessionStorage.getItem("user_data")){
-            return(direction)
+            return({direction})
         }
         else {
             return("/login")
