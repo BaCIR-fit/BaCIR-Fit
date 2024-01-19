@@ -1,6 +1,7 @@
 import interactionPlugin from '@fullcalendar/interaction';
 import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
+import frLocale from '@fullcalendar/core/locales/fr';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -80,6 +81,7 @@ function Calendrier(props){
                 contentHeight = "auto" // Hauteur du contenu du calendrier
                 editable = { false } // Désactivation de la fonction d'édition pour permettre la modification des événements
                 eventClick = { handleEventClick } // Ajouter la fonction de rappel pour gérer le clic sur un événement
+                locales = { [ frLocale ] }
             />
             
             <Modal
