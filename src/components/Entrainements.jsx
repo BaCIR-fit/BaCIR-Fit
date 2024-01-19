@@ -1,5 +1,5 @@
 // Entrainements.js
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import './Entrainements.css';
 import axios from 'axios';
 
@@ -40,7 +40,7 @@ function getRoom(room_id){
 }
 
 function getClub(club_id){  
-  fetch('https://apibacir.fly.dev/admin/clubs/getClubById' + club_id,{
+  fetch('https://apibacir.fly.dev/admin/clubs/getClubById/' + club_id,{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -57,7 +57,7 @@ function getClub(club_id){
 }
 
 function getActivity(activity_id){  
-  fetch('https://apibacir.fly.dev/admin/clubs/getClubById' + activity_id,{
+  fetch('https://apibacir.fly.dev/admin/clubs/getClubById/' + activity_id,{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -74,8 +74,8 @@ function getActivity(activity_id){
 }
 
 // handlePage()
-let historiqueEntrainement = JSON.parse(localStorage.getItem("entrainements"))
-// console.log(historiqueEntrainement)
+// let logTraining = JSON.parse(localStorage.getItem("entrainements"))
+// console.log(logTraining)
 
 
 const Entrainements = () => {
@@ -86,14 +86,13 @@ const Entrainements = () => {
 
   
 const handlePage = () => {
-  console.log(document.cookie)
+  document.cookie = "SessionID="+sessionStorage.getItem("SessionID")+";"
   // fetch('https://apibacir.fly.dev/user/getLogs',{
-    fetch('http://localhost:3000/ user/getLogs',{
+    fetch('http://localhost:3000/user/getLogs/'+JSON.parse(sessionStorage.getItem("user_data"))._id,{
    method:'GET',
    credentials:"include",
    headers: {
     'accept':'application/json',
-      // 'Cookie':"SessionID"+sessionStorage.getItem('SessionID'),
      'Content-type': 'application/json; charset=UTF-8',
    },
 
@@ -102,7 +101,7 @@ const handlePage = () => {
    .then(data => {
    try{ 
        console.log("ici on envoie les logs");
-       let logsUser = data.data;
+       let logsUser = data.data[0];
        localStorage.setItem("entrainements",JSON.stringify(logsUser))
    } catch (err) {
        console.log(data.message)
@@ -110,15 +109,15 @@ const handlePage = () => {
  }).catch((err) => console.log(err))
 }
   handlePage()
-
-  let historiqueEntrainement = JSON.parse(localStorage.getItem("entrainements"))
-  console.log(historiqueEntrainement)
+  
+  let [logTraining,setLogTraining] = useState(JSON.parse(localStorage.getItem("entrainements")))
+  console.log(logTraining)
   
   return (
     <div>
       <h2>Historique des entrainements</h2>
       <ul>
-        {historiqueEntrainement.map((entrainement, index) => {
+        {logTraining.map((entrainement, index) => {
 
           getRoom(entrainement.room_id)
           getClub(entrainement.room_id)

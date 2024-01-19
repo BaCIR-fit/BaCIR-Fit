@@ -28,7 +28,8 @@ function Signin() {
     // Enregistrez vos paramètres mis à jour ici (onSave(updatedSettings))
     //onClose();  // Fermer le modal après la sauvegarde
     console.log(updatedSettings)
-    fetch('https://apibacir.fly.dev/auth/login',{
+    // fetch('https://apibacir.fly.dev/auth/login',{
+    fetch('http://localhost:3000/auth/login',{
       method:'POST',
       body:JSON.stringify(updatedSettings),
       headers: {
@@ -38,14 +39,15 @@ function Signin() {
     .then(response => response.json())
     .then(data => {
       try{ 
-        localStorage.setItem("SessionID",data.data.token)
+        // localStorage.setItem("SessionID",data.data.token)
         sessionStorage.setItem("SessionID",data.data.token)
 
         localStorage.setItem("qr_code",data.data.qr_code)
-        const cookies = new Cookies();
-      cookies.set('SessionID',data.data.token, { path: '/' });
+        // const cookies = new Cookies();
+      // cookies.set('SessionID',data.data.token, { path: '/' });
 
         sessionStorage.setItem("user_data",data.data.user_data);
+        console.log( sessionStorage.getItem("user_data"),data.data)
         // console.log(data)
       } catch {
         console.log(data.message)
