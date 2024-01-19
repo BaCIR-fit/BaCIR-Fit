@@ -68,11 +68,11 @@ allActivities = JSON.parse(localStorage.getItem('activity'));
 
 function Planning() {
   const initialData = [];
-  console.log(allActivities);
   if (allActivities) {
 
-    allActivities.forEach((activity) => {
-      let start = new Date(activity[0].activity_date);
+    allActivities[0].forEach((activity) => {
+
+      let start = new Date(activity.activity_date);
       let end = new Date(start);
 
       end.setHours(end.getHours() + 1);
@@ -88,8 +88,6 @@ function Planning() {
     });
   }
 
-  console.log("PROUT",initialData);
-
   const [selectedClub, setSelectedClub] = useState('');
   const [filteredData, setFilteredData] = useState(initialData);
 
@@ -99,21 +97,21 @@ function Planning() {
     setSelectedClub(club);
   };
 
-  // useEffect(() => {
-  //   filterDataByClub(selectedClub);
-  // }, [selectedClub]);
+  useEffect(() => {
+    filterDataByClub(selectedClub);
+  }, [selectedClub]);
 
-  // const filterDataByClub = (club) => {
-  //   if (club === '') {
-  //     setFilteredData(initialData);
-  //   } else {
-  //     const filtered = initialData.filter((event) => {
-  //       console.log(event.club, " ", club, event.club === club);
-  //       return event.club === club});
-  //     setFilteredData(filtered);
-  //     console.log(filtered);
-  //   }
-  // };
+  const filterDataByClub = (club) => {
+    if (club === '') {
+      setFilteredData(initialData);
+    } else {
+      const filtered = initialData.filter((event) => {
+        console.log(event.club, " ", club, event.club === club);
+        return event.club === club});
+      setFilteredData(filtered);
+      console.log(filtered);
+    }
+  };
 
 
   return (
@@ -121,7 +119,7 @@ function Planning() {
       <Header />
       <div>
         <SelectPlanning data={allClubs} onClubChange={handleClubChange} />
-        <Calendrier data={allActivities[0]} />
+        <Calendrier data={filteredData} />
         <DivFooter />
       </div>
       <Footer />
