@@ -21,6 +21,7 @@ function Calendrier(props){
         setSelectedEvent(info.event); // accet aux informations de l'événement cliqué via `info.event`
         setIsDejaInscrit(info.event.extendedProps.isDejaInscrit || false);
         setModalOpen(true);
+        console.log(selectedEvent)
     };
 
     // Inscrit ou désincrit l'utilisateur

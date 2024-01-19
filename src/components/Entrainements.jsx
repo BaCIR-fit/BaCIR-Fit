@@ -4,23 +4,6 @@ import './Entrainements.css';
 import axios from 'axios';
 
 
-// function handlePage(){
-//   fetch('https://apibacir.fly.dev/user/getLogs',{
-//    method:'GET',
-//    headers: {
-//      'Content-type': 'application/json; charset=UTF-8',
-//    }})
-//    .then(response => response.json())
-//    .then(data => {
-//    try{ 
-//        console.log("ici on envoie les logs");
-//        let logsUser = data.data;
-//        localStorage.setItem("entrainements",JSON.stringify(logsUser))
-//    } catch (err) {
-//        console.log(data.message)
-//    }
-//  })
-// }
 
 function getRoom(room_id){
   fetch('https://apibacir.fly.dev/admin/rooms/getRoom/' + room_id,{
@@ -121,7 +104,6 @@ const handlePage = () => {
 
           getRoom(entrainement.room_id)
           getClub(entrainement.room_id)
-          let roomName = JSON.parse(localStorage.getItem("room"))
           let clubName = JSON.parse(localStorage.getItem("club"))
 
           return(
@@ -131,13 +113,13 @@ const handlePage = () => {
               <div className="column">
                 <p>entrainement.date</p>
                 <p>{entrainement.workout_time}</p>
-                <p>{roomName.room_name}</p>
+                <p>{entrainement.room_name}</p>
               </div>
               <div className="column">
                 <p>{entrainement.workout_duration} minutes</p>
                 <p>{entrainement.activity_id}</p>
           
-                <p>{clubName.club_name}</p>
+                <p>{entrainement.club_name}</p>
               </div>
             </div>
           </li>

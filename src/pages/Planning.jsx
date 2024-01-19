@@ -24,7 +24,7 @@ function handleActivities(id_club){
 }
 
 function handleClub(){
-  fetch('https://apibacir.fly.dev/admin/clubs/getAllClubs/2',{
+  fetch('https://apibacir.fly.dev/admin/clubs/getAllClubs/4',{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
