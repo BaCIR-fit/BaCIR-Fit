@@ -11,6 +11,24 @@ import './Parametres.css';
 
 const Parametres = () => {
 
+  const [isSubscribed, setIsSubscribed] = React.useState(false);
+
+  // Fetch user subscription status when the component mounts
+  React.useEffect(() => {
+    fetch('http://localhost:3000/user/getProfile', {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    }).then(response => response.json())
+      .then(data => {
+        setIsSubscribed(data.isActive);
+      })
+      .catch(error => {
+        console.error('Error fetching subscription status:', error);
+      });
+  }, []); 
+
   const handleDeconnexion = () => {
     // Logique de déconnexion ici
     console.log('Déconnexion effectuée');
@@ -29,7 +47,7 @@ const Parametres = () => {
   return (
     <div>
     <ul>
-      <li><a>{Resiliation()}</a></li>
+    <li><a>{isSubscribed ? Resiliation() : Abonnement()}</a></li>
         <li><Link to="/historique"> Mes visites </Link></li>
     </ul>
     <button id="deco" onClick={handleDeconnexion}>Déconnexion</button>
@@ -81,7 +99,7 @@ function Resiliation() {
   );
 }
 
-function abonnement() {
+function Abonnement() {
 
   const handleAbonnement = () => {
   console.log('abonnement effectuée');
@@ -101,7 +119,7 @@ function abonnement() {
 
   return (
       <div>
-          <a href="#resiliation" onClick={handleOpen} className="custom-link"> Acheter mon abonnement </a>
+          <a href="#abonnement" onClick={handleOpen} className="custom-link"> Acheter mon abonnement </a>
           <Modal
           open={open}
           onClose={handleClose}
