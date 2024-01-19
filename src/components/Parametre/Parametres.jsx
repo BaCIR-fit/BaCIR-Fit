@@ -29,7 +29,7 @@ const Parametres = () => {
   return (
     <div>
     <ul>
-        <li><a>{Resiliation()}</a></li>
+        <li><a>Résilier</a></li>
         <li><Link to="/historique"> Mes visites </Link></li>
     </ul>
     <button id="deco" onClick={handleDeconnexion}>Déconnexion</button>
@@ -39,14 +39,17 @@ const Parametres = () => {
 };
 
 function Resiliation() {
+
+  const handleResiliation = () => {
   console.log('Résiliation effectuée');
-  fetch('http://localhost:3000/users/user/isNotActivet',{
+  fetch('http://localhost:3000/user/isNotActive',{
     method:'GET',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     }}).then(() => {
-      window.location.pathname = "/"
+      // window.location.pathname = "/"
     })
+  };
   
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -69,7 +72,7 @@ function Resiliation() {
               <Typography>
                   Êtes vous vraiment sûr de vouloir résilier votre abonnement ?
               </Typography>
-              <Button /*onClick = {  DESABONNER ICI } */ >
+              <Button onClick={handleResiliation} >
                 { "CONFIRMER" }
               </Button>
               </Box>
